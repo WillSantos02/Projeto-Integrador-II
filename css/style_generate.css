@@ -112,21 +112,31 @@ h1 {
     margin-right: auto;
 }
 
-p {
+input {
+    text-align: center;
+
+    width: 307px;
     margin-top: 30px;
     padding: 10px 10px 10px 10px;
+
+    background-color: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
+    
     color: #FFFFFF;
 }
 .icon-copy {
+    background: transparent;
+    border: none;
     margin-left: 15px;
     margin-top: 30px;
     cursor: pointer;
+}.icon-copy img:hover{
+    opacity: 0.7;
 }
 
 .generate {
-    margin-top: 0px;
+    margin-top: 30px;
     margin-bottom: 50px;
     width: 120px;
     height: 30px;
@@ -237,8 +247,16 @@ footer {
 }
 
 .btn-modal-confirm, .btn-modal-cancel {
+    width: 120px;
+    height: 30px;
+
+    margin-top: 0px;
     margin-bottom: 0.5%;
-    margin-left: 40px;   
+    margin-left: 40px;
+    
+    border-radius: 10px;
+    cursor: pointer;
+       
 }
 
 span{

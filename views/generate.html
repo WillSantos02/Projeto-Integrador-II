@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../css/style_generate.css">
+        <link rel="stylesheet" href="../css/tooltip.css">
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
         <script src="../js/copyfun.js"></script>
@@ -54,8 +55,14 @@
                 <img class ="qr-code"src="https://api.qrserver.com/v1/create-qr-code/?data=qrcode_example&size=183x183" alt="qr code" id="qrCodeImg"/>
 
                 <div class="text-code">
-                    <p id="ticketCode">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
-                    <a class="icon-copy" onclick="myFunction()"><img src="../assets/icon_copy.svg">
+                    <input type="text" value="" id="ticketCode" readonly placeholder="xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx">
+                    
+                    <div class="tooltip">
+                        <button class="icon-copy" onclick="myFunction()" onmouseout="outFunc()">
+                            <span class="tooltiptext" id="myTooltip">Copiar</span>
+                            <img src="../assets/icon_copy.svg">
+                        </button>
+                    </div>
                 </div>
 
                 <div class="buttons">
@@ -158,7 +165,7 @@
 
                 qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${newTicketCode.id_ticket}&size=183x183`;
 
-                ticketCode.textContent = newTicketCode.id_ticket || newTicketCode.error;
+                ticketCode.value = newTicketCode.id_ticket || newTicketCode.error;
 
                 navigator.clipboard.writeText(newTicketCode.id_ticket);
             })
