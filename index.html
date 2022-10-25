@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_flipcard.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        
+        <title>TRANSCAR</title>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <abbr title="Ir para Home"><img class="logo" id="navbar" src="assets/TRANSCAR.svg" alt="Ir para Home"></abbr>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Bilhetes</a></li>
+                    <li><a href="#">Sobre <img src="assets/dropdown_menu_icon.svg"> </a></li>
+                    <li class="disable">Para empresas</li>
+                </ul>
+
+                <ul class="nav-list">
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='#'" class="btn-nav">
+                                Conta
+                            </button>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='#'" class="btn-nav purple">
+                                Bilhetes
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="flip-card card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class="" src="assets/credit_card_7dias.svg"> 
+                        </div>
+        
+                        <div class="flip-card-back">
+                            <h1>7 DIAS</h1>
+                            <p>Cartão de uso semanal</p>
+                            <p>TESTE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card card center">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class="" src="assets/credit_card_unico.svg"> 
+                        </div>
+        
+                        <div class="flip-card-back">
+                            <h1>ÚNICO</h1>
+                            <p>Cartão de uso Único</p>
+                            <p>TESTE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class="" src="assets/credit_card_30dias.svg"> 
+                        </div>
+        
+                        <div class="flip-card-back">
+                            <h1>30 DIAS</h1>
+                            <p>Cartão de uso mensal</p>
+                            <p>TESTE</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="actions">
+                <h1>Ações rápidas para o Bilhete</h1>
+
+                <ul class="action-buttons">
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='views/generate.html'" class="btn-nav purple action-btn" href="views/generate.html">
+                                Gerar
+                            </button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='views/recarga.html'" class="btn-nav action-btn">
+                                Recarregar
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="action-buttons">
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='#'" class="btn-nav action-btn">
+                                Utilizar
+                            </button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='#'" class="btn-nav purple action-btn">
+                                Ver
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="actions types">
+                <h1>Nossos Bilhetes</h1>
+
+                <ul class="texts">
+                    <li>
+                        <div class="text-infos">
+                            <h1>Créditos</h1>
+
+                            <p>Ao utilizar o bilhete créditos terá passe livre para usar todos os transportes públicos disponíveis durante 40 minutos, após que o tempo tenha passado um novo crédito será debitado. As opções disponíveis  único, o duplo e personalizado.</p>
+                
+                            <div class="buttons">
+                                <button type="button" onclick="location.href='views/generate.html'" class="btn-nav purple text-btn">Gerar Bilhete</button>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="text-infos">
+                            <h1>Personalitè</h1>
+
+                            <p>De acordo com a sua escolha de um tempo pré-definido, sendo eles: 7, 14 e 30 dias, ao utilizar terá passe livre durante o tempo escolhido.</p>
+
+                            <div class="buttons">
+                                <button type="button" onclick="location.href='views/generate.html'" class="btn-nav purple text-btn">Gerar Bilhete</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="about-container">
+                <h1>Quem somos nós ?</h1>
+
+                <div class="about-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac dictum libero, nec aliquam lacus. Fusce euismod, elit sagittis mollis egestas, magna neque consequat lectus, eu posuere nulla felis in sapien. Sed at congue ipsum. In hac habitasse platea dictumst. Morbi ut urna vitae dolor pulvinar interdum quis sed nisi. Donec dictum leo et efficitur ornare. Nam convallis laoreet risus, consectetur rhoncus quam suscipit in. Ut id augue feugiat, laoreet odio eu, scelerisque ante. In scelerisque leo vel accumsan vestibulum. Fusce sit amet finibus erat. Aliquam risus ipsum, congue vitae purus eget, vehicula tincidunt ex.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-list">
+                        <li><a href="#navbar">Voltar ao inicio</a></li>
+                    </ul>
+                </nav>
+
+                <div class="row-footer">
+                    
+                    <div class="footer-col">
+                        <h4>Conheça-nos</h4>
+                        <ul>
+                            <li><a href="#">Sobre nos</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Nossos valores</a></li>
+                            <li><a href="#">Nossa missão</a></li>
+                            <li><a href="#">Nossa visão</a></li>
+                            <li><a href="#">Trabalhe conosco</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Bilhetes</h4>
+                        <ul>
+                            <li><a href="#">Como funcionam</a></li>
+                            <li><a href="views/generate.html">Gerar novo bilhete</a></li>
+                            <li><a href="views/recarga.html">Recarregar bilhete</a></li>
+                            <li><a href="#">Meus Bilhetes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Conta</h4>
+                        <ul>
+                            <li><a href="#">Registrar</a></li>
+                            <li><a href="#">Entrar</a></li>
+                            <li><a href="#">Gerar novo código</a></li>
+                            <li><a href="#">Meus bilhetes</a></li>
+                            <li><a href="#">Histórico de Recargas</a></li>
+                            <li><a href="#">Histórico de Utilização</a></li>
+                            <li><a href="#">Gerenciar minha conta</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Para empresas</h4>
+                        <ul>
+                            <li><a href="#">Transcar e seu negócio</a></li>
+                            <li><a href="#">Comprar para sua empresa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

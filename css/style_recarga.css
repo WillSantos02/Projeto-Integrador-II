@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+@media (prefers-reduced-motion: no-preference){
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :target{
+        scroll-margin-top: 15px;  
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+/** Navbar style **/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1E1E1E;
+    height: 9.28vh; /** Valor em pixel = 70 | VH é o View port Height da pagina **/
+}
+.nav-list {
+    font-weight: 200;
+    list-style: none;
+    display: flex;
+}
+.nav-list li {
+    margin-left: 35px;
+}
+.disable {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+}
+.btn-nav {
+    box-sizing: border-box;
+    display: flex;
+
+    width: 100px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+}
+.purple {
+    border: none;
+    background-color: #BB86FC;
+    font-weight: 400;
+}
+/** End Navbar style **/
+
+/** Main and Sections style **/
+main {
+    background: #222;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+/** End Main and Sections style **/
+
+/** Input style **/
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 31px;
+}
+
+.code-reload {
+    display: grid;
+}
+
+p.ticket-code {
+    border: none;
+    font-size: 14;
+    font-weight: 100;
+    margin-top: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+input {
+    width: 307px;
+    height: 30px;
+    margin-top: 10px; 
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+/** End Input style **/
+
+/** Buttons **/
+.texts {
+    list-style: none;
+    display: flex;
+}
+.text-infos {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.text-infos h1{
+    color: #7F39FB;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    list-style: none;
+}
+.action-buttons li {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.action-btn {
+    width: 135px;
+    height: 31px;
+}
+.buttons {
+    margin-left: auto;
+    margin-right: auto;
+}
+.generate {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+}
+/** End Buttons **/
+
+/** Footer style **/
+footer {
+    background-color: #1E1E1E;
+    padding-bottom: 20px;
+}
+.nav-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #262626;
+    height: 50px
+}
+
+.container-footer {
+    width: 100%;
+    margin: auto;
+}
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-col {
+    width: 200px;
+    margin-left: 20px;
+}
+.footer-col h4 {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    opacity: 0.7;
+    padding-left: 10px;
+}
+
+/** MODAL **/
