@@ -143,6 +143,9 @@ input {
     border-radius: 10px;
     cursor: pointer;
 }
+.recarga {
+    margin-left: 20px;
+}
 
 /** Footer style **/
 footer {
