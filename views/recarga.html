@@ -41,25 +41,72 @@
                     <div class="card">
                         <a><img src="../assets/credit_card_7dias.svg"></a>
                     </div>
-    
-                    <div class="card">
+                    
+                    <div class="card card_unico">
                         <a><img src="../assets/credit_card_unico.svg"></a>
                     </div>
 
-                    <div class="modal-container mostrar" id="termAcceptance">    
+                    <div class="modal-container" id="modalRecharge">
                         <div class="modal">
-                            <h1>Código do bilhete</h1>
-                            <input type="text" placeholder="xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx">
+                            <p class="ticket-code">Código do bilhete</p>
+                            <input type="text" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+                    
+                            <ul class="texts">
+                                <div class="text-infos">
+                                    <ul class="action-buttons">
+                                        <li>
+                                            <div class="buttons">
+                                                <a class="btn-nav action-btn" href="#">
+                                                    1 dia
+                                                </a>
+                                            </div>
+                                        </li>
+                    
+                                        <li>
+                                            <div class="buttons">
+                                                <a class="btn-nav action-btn" href="#">
+                                                    7 dias
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="text-infos">
+                                    <ul class="action-buttons">
+                                        <li>
+                                            <div class="buttons">
+                                                <a class="btn-nav action-btn" href="#">
+                                                    3 Dias
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="buttons">
+                                                <a class="btn-nav action-btn" href="#">
+                                                    14 Dias
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        
+                            <div class="buttons">
+                                <a class="btn-nav purple action-btn thirty" href="#">
+                                    30 Dias
+                                </a>
+                            </div>
 
-                            <button>1 dia</button>
-                            <button>3 dias</button>
-                            <button>7 dias</button>
-                            <button>14 dias</button>
-                            <button>30 dias</button>
+                            <div class="valor">
+                                <label>Valor: <input type="text" readonly placeholder="R$10,00"></label>
+                            </div>
 
-                            <label>Valor: <input type="text" readonly placeholder="R$10,00"></label>
-
-                            <button>Recarregar</button>
+                            <div class="buttons">
+                                <a class="btnext btn-nav purple generate">
+                                    Recarregar
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -111,4 +158,5 @@
         </footer>
     </body>
 
+    <script src="../js/modal_recarga.js"></script>
 </html>

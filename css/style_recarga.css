@@ -107,7 +107,6 @@ p.ticket-code {
     border: none;
     font-size: 14;
     font-weight: 100;
-    margin-top: 20px;
     color: #FFFFFF;
     text-align: center;
 }
@@ -130,36 +129,48 @@ input {
 .texts {
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 .text-infos {
-    width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.text-infos h1{
-    color: #7F39FB;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .action-buttons {
     list-style: none;
 }
 .action-buttons li {
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .action-btn {
-    width: 135px;
-    height: 31px;
+    width: 148px;
+    height: 33px;
 }
-.buttons {
-    margin-left: auto;
-    margin-right: auto;
+.action-btn.thirty {
+    margin: 0px auto 15px auto;
+}
+.generate {
+    margin: 20px auto 59px auto;
+    width: 112px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.valor{
+    display: flex;
+    justify-content: center;
+}
+label {
+    color: white;
+    font-weight: 200;
+}
+:is(label) input {
+    width: 79px;
+    height: 31px;
 }
 /** End Buttons **/
 
@@ -227,13 +238,9 @@ footer {
     align-items: center;
 }
 .modal{
-    background: red;
     width: 307px;
     height: 300px;
 }
-
-
-
 
 @keyframes modal {
     from{
