@@ -25,6 +25,9 @@ a {
 a:hover {
     opacity: 0.7;
 }
+:is(.card) a{
+    opacity: 1;
+}
 
 .logo:hover {
     opacity: 1;
@@ -157,6 +160,38 @@ input {
     margin: 20px auto 59px auto;
     width: 112px;
     height: 32px;
+    cursor: pointer;
+}
+
+.selecionado {
+    background-color: pink;
+
+    margin-top: 20px;
+    margin-left: -110px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+
+    position: relative;
+    transition: 100ms;
+}
+:is(.selecionado) a{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.selecionado_sete {
+background-color: orange;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: -120px;
+    margin-bottom: 50px;
+
+    position: relative;
+    transition: 100ms;
+}
+:is(.selecionado_sete) a{
+    opacity: 1;
     cursor: pointer;
 }
 
