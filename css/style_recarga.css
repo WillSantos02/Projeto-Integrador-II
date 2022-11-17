@@ -164,7 +164,7 @@ input {
 }
 
 .selecionado {
-    background-color: pink;
+    /* background-color: pink; */
 
     margin-top: 20px;
     margin-left: -110px;
@@ -180,7 +180,7 @@ input {
 }
 
 .selecionado_sete {
-background-color: orange;
+    /* background-color: orange; */
 
     margin-top: 20px;
     margin-left: 10px;
