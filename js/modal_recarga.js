@@ -14,5 +14,4 @@ function iniciaModal(){
 const card = document.querySelector('.card');
 card.addEventListener('click', () => iniciaModal('modalRecharge'));
 
-const card_unico = document.querySelector('.card_unico');
-card_unico.addEventListener('click', () => iniciaModal('modalRecharge'));
+card_personalite.addEventListener('click', () => iniciaModal('modalRecharge'));
