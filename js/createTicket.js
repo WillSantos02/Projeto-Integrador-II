@@ -3,6 +3,6 @@ const createTicket = async () => {
         method: 'POST',
     })
     .then(res => res.json())
-    .then(res => res)
+    .then(res => res.payload)
     .catch(res => res.error || {error: 'Erro ao gerar código'})
 }

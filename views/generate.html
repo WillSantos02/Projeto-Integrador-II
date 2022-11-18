@@ -137,11 +137,11 @@
             createTicketBtn.addEventListener('click', async () => {
                 let newTicketCode = await createTicket();
 
-                qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${newTicketCode.id_ticket}&size=183x183`;
+                qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${newTicketCode.TICKET_ID}&size=183x183`;
 
-                ticketCode.value = newTicketCode.id_ticket || newTicketCode.error;
+                ticketCode.value = newTicketCode.TICKET_ID || newTicketCode.error;
 
-                navigator.clipboard.writeText(newTicketCode.id_ticket);
+                navigator.clipboard.writeText(newTicketCode.TICKET_ID);
             })
         </script>
         <script src="../js/modal.js"></script>
