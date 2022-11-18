@@ -73,6 +73,14 @@ nav {
 
     cursor: pointer;
 }
+
+.btn-selected {
+    background-color: #BB86FC;
+    border: 0px;
+    color: white;
+}
+
+
 .purple {
     border: none;
     background-color: #BB86FC;
@@ -202,6 +210,7 @@ button {
     display: flex;
     justify-content: center;
 }
+
 label {
     color: white;
     font-weight: 200;

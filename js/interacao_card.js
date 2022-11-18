@@ -1,12 +1,14 @@
 const card_personalite = document.querySelector('.card_personalite');
 const card_creditos = document.querySelector('.card_creditos');
-//const btn_creditos = document.querySelector('.btncreditos');
+const modalPersonalite = document.getElementById('modalRechargePersonalite');
+const modalCreditos = document.getElementById('modalRechargeCreditos');
 
-const umDiaUnico = document.getElementById('umDiaUnico');
-const tresDiasDuplo = document.getElementById('tresDiasDuplo');
-const seteDiasQuatorze = document.getElementById('seteDiasQuatorze');
-const quatorzeDiasTrinta = document.getElementById('quatorzeDiasTrinta');
-const trintaDias = document.getElementById('trintaDias');
+const buttonsCreditos = document.querySelectorAll('.action-btn')
+const valorRecarga = document.querySelectorAll('.valorRecarga')
+
+const inputPersonalite = document.getElementById('inputBilhetePersonalite')
+const inputCreditos = document.getElementById('inputBilheteCreditos')
+
 
 // 
 card_personalite.addEventListener('click', () => {
@@ -14,13 +16,28 @@ card_personalite.addEventListener('click', () => {
     if (card_creditos.classList.contains('selecionado_creditos'))
     {
         card_creditos.classList.replace('selecionado_creditos', 'card_creditos');
-        //btn_creditos.classList.replace('disable', 'btncreditos')
-        umDiaUnico.textContent = '1 dia'
-        tresDiasDuplo.textContent = '3 dias'
-        seteDiasQuatorze.textContent = '7 dias'
-        quatorzeDiasTrinta.textContent = '14 dias'
-        trintaDias.style.display = 'flex';
     }
+
+    modalPersonalite.classList.contains('mostrar') ? modalPersonalite.classList.remove('mostrar') : modalPersonalite.classList.add('mostrar')
+
+
+    if (modalCreditos.classList.contains('mostrar')){
+        modalCreditos.classList.remove('mostrar');
+        modalPersonalite.classList.add('mostrar')
+    }
+
+    buttonsCreditos.forEach(buttonF => {
+        if (buttonF.classList.contains('btn-selected')){
+            buttonF.classList.remove('btn-selected')
+        }
+    })
+
+    valorRecarga.forEach(input => {
+        input.placeholder = "R$10.00"
+    })
+
+    inputCreditos.value = '';
+    inputPersonalite.value = '';
 });
 
 card_creditos.addEventListener('click', () => {
@@ -28,11 +45,26 @@ card_creditos.addEventListener('click', () => {
     if (card_personalite.classList.contains('selecionado'))
     {
         card_personalite.classList.replace('selecionado', 'card_personalite')
-        //btn_creditos.classList.replace('btncreditos', 'disable')
-        umDiaUnico.textContent = 'UNICO'
-        tresDiasDuplo.textContent = 'DUPLO'
-        seteDiasQuatorze.textContent = '14 dias'
-        quatorzeDiasTrinta.textContent = '30 dias'
-        trintaDias.style.display = 'none';
     }
+
+    modalCreditos.classList.contains('mostrar') ? modalCreditos.classList.remove('mostrar') : modalCreditos.classList.add('mostrar')
+
+
+    if (modalPersonalite.classList.contains('mostrar')){
+        modalPersonalite.classList.remove('mostrar')
+        modalCreditos.classList.add('mostrar');
+    }
+
+    buttonsCreditos.forEach(buttonF => {
+        if (buttonF.classList.contains('btn-selected')){
+            buttonF.classList.remove('btn-selected')
+        }
+    })
+
+    valorRecarga.forEach(input => {
+        input.placeholder = "R$10.00"
+    })
+
+    inputCreditos.value = '';
+    inputPersonalite.value = '';
 });

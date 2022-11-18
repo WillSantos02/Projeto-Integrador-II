@@ -46,17 +46,17 @@
                         <a><img src="../assets/card_personalite.svg"></a>
                     </div>
 
-                    <div class="modal-container " id="modalRecharge">
+                    <div class="modal-container " id="modalRechargePersonalite">
                         <div class="modal">
                             <p class="ticket-code">Código do bilhete</p>
-                            <input type="text" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+                            <input type="text" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" maxlength="36" id="inputBilhetePersonalite" required >
                     
                             <ul class="texts">
                                 <div class="text-infos">
                                     <ul class="action-buttons">
                                         <li>
                                             <div class="buttons btncreditos">
-                                                <button id="umDiaUnico" class="btn-nav action-btn" href="#">
+                                                <button id="1d" class="btn-nav action-btn" data-value="10.27">
                                                     1 dia
                                                 </button>
                                             </div>
@@ -64,7 +64,7 @@
                     
                                         <li>
                                             <div class="buttons btncreditos">
-                                                <button id="seteDiasQuatorze" class="btn-nav action-btn" href="#">
+                                                <button id="7d" class="btn-nav action-btn" data-value="71.89">
                                                     7 dias
                                                 </button>
                                             </div>
@@ -76,14 +76,14 @@
                                     <ul class="action-buttons">
                                         <li>
                                             <div class="buttons btncreditos">
-                                                <button id="tresDiasDuplo" class="btn-nav action-btn" href="#">
+                                                <button id="3d" class="btn-nav action-btn" data-value="30.81">
                                                     3 Dias
                                                 </button>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="buttons btncreditos">
-                                                <button id="quatorzeDiasTrinta" class="btn-nav action-btn" href="#">
+                                                <button id="14d" class="btn-nav action-btn" data-value="143.78">
                                                     14 Dias
                                                 </button>
                                             </div>
@@ -93,17 +93,59 @@
                             </ul>
                         
                             <div class="buttons btncreditos">
-                                <a id="trintaDias" class="btn-nav action-btn thirty" href="#">
+                                <a id="30d" class="btn-nav action-btn thirty" data-value="308.1">
                                     30 Dias
                                 </a>
                             </div>
 
                             <div class="valor">
-                                <label>Valor: <input type="text" readonly placeholder="R$10,00"></label>
+                                <label>Valor: <input type="text" readonly placeholder="R$10,00" class="valorRecarga"></label>
                             </div>
 
                             <div class="buttons">
-                                <button class="btnext btn-nav purple generate">
+                                <button id="btnRecargaPersonalite" class="btnext btn-nav purple generate recharge">
+                                    Recarregar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-container " id="modalRechargeCreditos">
+                        <div class="modal">
+                            <p class="ticket-code">Código do bilhete</p>
+                            <input type="text" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" id="inputBilheteCreditos" required>
+                    
+                            <ul class="texts">
+                                <div class="text-infos">
+                                    <ul class="action-buttons">
+                                        <li>
+                                            <div class="buttons btncreditos">
+                                                <button id="u" class="btn-nav action-btn" data-value="3.26">
+                                                    Único
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="text-infos">
+                                    <ul class="action-buttons">
+                                        <li>
+                                            <div class="buttons btncreditos">
+                                                <button id="d" class="btn-nav action-btn" data-value="6.52">
+                                                    Duplo
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>
+
+                            <div class="valor">
+                                <label>Valor: <input type="text" readonly placeholder="R$10,00" class="valorRecarga"/></label>
+                            </div>
+
+                            <div class="buttons">
+                                <button id="btnRecargaCreditos" class="btnext btn-nav purple generate recharge">
                                     Recarregar
                                 </button>
                             </div>
@@ -159,5 +201,6 @@
     </body>
 
     <script src="../js/interacao_card.js"></script>
-    <script src="../js/modal_recarga.js"></script>
+    <script src="../js/interacao_botoes.js"></script>
+    <script src="../js/recarga.js"></script>
 </html>
