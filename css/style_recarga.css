@@ -25,8 +25,11 @@ a {
 a:hover {
     opacity: 0.7;
 }
-:is(.card) a{
+:is(.card, .disable) a{
     opacity: 1;
+}
+:is(.disable) a{
+    cursor: default;
 }
 
 .logo:hover {
@@ -54,6 +57,7 @@ nav {
     text-decoration: none;
     opacity: 0.5;
 }
+
 .btn-nav {
     box-sizing: border-box;
     display: flex;
@@ -66,6 +70,8 @@ nav {
 
     border: 1px solid #FFFFFF;
     border-radius: 30px;
+
+    cursor: pointer;
 }
 .purple {
     border: none;
@@ -160,7 +166,6 @@ input {
     margin: 20px auto 59px auto;
     width: 112px;
     height: 32px;
-    cursor: pointer;
 }
 
 .selecionado {
@@ -174,7 +179,6 @@ input {
 }
 :is(.selecionado) a{
     opacity: 1;
-    cursor: pointer;
 }
 
 .selecionado_creditos {
@@ -188,7 +192,6 @@ input {
 }
 :is(.selecionado_creditos) a{
     opacity: 1;
-    cursor: pointer;
 }
 
 .valor{
