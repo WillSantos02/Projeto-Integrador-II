@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="../css/style_recarga.css">
         <link rel="stylesheet" href="../css/scroolbar.css">
+        <link rel="stylesheet" href="../css/modalMensagem.css">
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
         
         <title>Recarga</title>
@@ -152,7 +153,29 @@
                         </div>
                     </div>
                 </section>
-            </section>            
+            </section>  
+            
+            <section class="actions types">
+                <h1>Nossos Bilhetes</h1>
+
+                <ul class="texts-rec">
+                    <li>
+                        <div class="text-rec">
+                            <h1>Créditos</h1>
+
+                            <p>Ao utilizar o bilhete créditos terá passe livre para usar todos os transportes públicos disponíveis durante 40 minutos, após que o tempo tenha passado um novo crédito será debitado. As opções disponíveis  único, o duplo e personalizado.</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="text-rec">
+                            <h1>Personalitè</h1>
+
+                            <p>De acordo com a sua escolha de um tempo pré-definido, sendo eles: 7, 14 e 30 dias, ao utilizar terá passe livre durante o tempo escolhido.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
         </main>
 
         <footer>
@@ -198,6 +221,36 @@
                 </div>
             </div>
         </footer>
+
+        <div id="modalMensagemSuccess" style="display: none;">    
+            <div class="container">
+                <div class="bar-modal">
+                    <h1 class="modal-title">Aviso de recargar !</h1>
+                </div>
+                
+                <div class="mensagem">
+                    <span>Bilhete recarregado com Sucesso !</span>
+                </div>
+                
+                <div class="bottom-modal sucess">
+                </div>
+            </div>
+        </div>
+
+        <div id="modalMensagemError" style="display: none;">    
+            <div class="container">
+                <div class="bar-modal">
+                    <h1 class="modal-title">Aviso de recargar !</h1>
+                </div>
+                
+                <div class="mensagem">
+                    <span>Código invalido ou inexistente</span>
+                </div>
+                
+                <div class="bottom-modal error">
+                </div>
+            </div>
+        </div>
     </body>
 
     <script src="../js/interacao_card.js"></script>

@@ -1,0 +1,77 @@
+#modalMensagemSuccess, #modalMensagemError {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: modal .3s;
+}
+
+.container{
+    position: relative;
+    background: #222;
+    width: 600px;
+    height: 180px;
+    box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
+}
+.bar-modal {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensagem {
+    height: 100px;
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mensagem span{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+.bottom-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+}
+.sucess {
+    background-color: #2A8E28;
+}
+
+.error {
+    background-color: #8E2828;
+
+}
+
+.modal-title {
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

@@ -1,6 +1,9 @@
 const btnPersonalite = document.getElementById('btnRecargaPersonalite')
 const btnCreditos = document.getElementById('btnRecargaCreditos')
 
+const modalMensagemSuccess = document.getElementById('modalMensagemSuccess')
+const modalMensagemError = document.getElementById('modalMensagemError')
+
 btnPersonalite.addEventListener('click', async () => {
     if (inputPersonalite.value != '')
     {//tem algo digitado
@@ -16,10 +19,9 @@ btnPersonalite.addEventListener('click', async () => {
                     type: btnSelect[0].id
                 }
             }).then(res => res.json()).then(res=>res)
-            
-            //alert(response.message);
-        }
 
+            exibeModal(response.status);
+        }
     }
 })
 
@@ -39,8 +41,28 @@ btnCreditos.addEventListener('click', async () => {
                 }
             }).then(res => res.json()).then(res=>res)
             
-            alert(response.message);
+            exibeModal(response.status);
         }
-
     }
 })
+
+function exibeModal (status) {
+    //alert(response.message);
+    if(status == 'success'){
+        modalMensagemSuccess.style.display = 'flex';
+        //console.log('entrou no if');
+        
+        setTimeout(() => {
+            modalMensagemSuccess.style.display = 'none';
+            //consollog('entrou no setTimeout');
+        }, 5000);
+    } else {
+        modalMensagemError.style.display = 'flex';
+        //nsole.log('entrou no else');
+
+        setTimeout(() => {
+            modalMensagemError.style.display = 'none';
+            // consollog('entrou no setTimeout');
+        }, 5000);
+    }
+}
