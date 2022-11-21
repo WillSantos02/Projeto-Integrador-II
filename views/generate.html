@@ -9,17 +9,18 @@
         <link rel="stylesheet" href="../css/scroolbar.css">
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
-        <script src="../js/copyfun.js"></script>
+        <script src="../js/copyFunction.js"></script>
 
         <title>Geração</title>
     </head>
     
     <body>
+        <!-- Navbar -->
         <header>
             <nav>
-                <a class="logo" href="../index.html" id="navbar"><img src="../assets/TRANSCAR.svg" alt=""></a>
+                <abbr title="Ir para Home"><img class="logo" id="navbar" src="../assets/TRANSCAR.svg" alt="Ir para Home"></abbr>
                 <ul class="nav-list">
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre <img src="../assets/dropdown_menu_icon.svg"> </a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
@@ -27,14 +28,15 @@
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <a class="btn-nav purple" href="bilhetes.html">
+                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav purple">
                                 Bilhetes
-                            </a>
+                            </button>
                         </div>
                     </li>
                 </ul>
             </nav>
         </header>
+        <!-- Navbar -->
 
         <main>
             <section class="code-generate disabled" id="qrCodeSection">
@@ -59,12 +61,13 @@
                     </form>
 
                     <form action="" method="post">
-                        <a class="btnext btn-nav generate recarga" href="recarga.html">Recarregar</a>
+                        <a class="btnext btn-nav generate recarga" href="recharge.html">Recarregar</a>
                     </form>
                 </div>
             </section>
         </main>
 
+        <!-- Footer -->
         <footer>
             <div class="container-footer">
                 <nav class="nav-footer">
@@ -74,28 +77,29 @@
                 </nav>
 
                 <div class="row-footer">
+                    
                     <div class="footer-col">
-                        <h4>Conheça-nos</h4>
+                        <h4>Sobre o Transcar</h4>
                         <ul>
                             <li><a href="#">Sobre nos</a></li>
                             <li><a href="#">Contato</a></li>
-                            <li><a href="#">Nossos valores</a></li>
-                            <li><a href="#">Nossa missão</a></li>
-                            <li><a href="#">Nossa visão</a></li>
+                            <li><a href="#">Responsabilidades</a></li>
                             <li><a href="#">Trabalhe conosco</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-col">
                         <h4>Bilhetes</h4>
                         <ul>
                             <li><a href="#">Como funcionam</a></li>
                             <li><a href="generate.html">Gerar novo bilhete</a></li>
-                            <li><a href="recarga.html">Recarregar bilhete</a></li>
-                            <li><a href="utilizacao.html">Utilizar Bilhetes</a></li>
+                            <li><a href="recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="usage.html">Utilizar Bilhetes</a></li>
                             <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-col">
                         <h4>Para empresas</h4>
                         <ul>
@@ -106,7 +110,9 @@
                 </div>
             </div>
         </footer>
+        <!-- Footer -->
 
+        <!-- Modal termo de utilização -->
         <div class="modal-container" id="termAcceptance">    
             <div class="modal">
                 <div class="nav-modal">
@@ -127,7 +133,9 @@
                 </div>
             </div>
         </div>
+        <!-- Modal termo de utilização -->
 
+        <!-- Geração do código -->
         <script src="../js/createTicket.js"></script>
         <script>
             const createTicketBtn = document.getElementById('btnGenerate');
@@ -144,8 +152,8 @@
                 navigator.clipboard.writeText(newTicketCode.TICKET_ID);
             })
         </script>
-        <script src="../js/modal.js"></script>
-        
-    </body>
+        <!-- Geração do código -->
 
+        <script src="../js/modal.js"></script>        
+    </body>
 </html>

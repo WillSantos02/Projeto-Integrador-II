@@ -13,32 +13,35 @@
     </head>
     
     <body>
+        <!-- Navbar -->
         <header>
             <nav>
-                <a class="logo" href="../index.html" id="navbar"><img src="../assets/TRANSCAR.svg" alt=""></a>
+                <abbr title="Ir para Home"><img class="logo" id="navbar" src="../assets/TRANSCAR.svg" alt="Ir para Home"></abbr>
                 <ul class="nav-list">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="/">Sobre <img src="../assets/dropdown_menu_icon.svg"> </a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre <img src="../assets/dropdown_menu_icon.svg"> </a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <a class="btn-nav purple" href="bilhetes.html">
+                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav purple">
                                 Bilhetes
-                            </a>
+                            </button>
                         </div>
                     </li>
                 </ul>
             </nav>
         </header>
+        <!-- Navbar -->
 
         <main>
             <section class="code-reload">
                 <h1>Recarregar bilhete</h1>
                 
                 <section>
+                    <!-- Cards clickaveis -->
                     <div class="card card_creditos">
                         <a><img src="../assets/card_creditos.svg"></a>
                     </div>
@@ -46,7 +49,9 @@
                     <div class="card card_personalite">
                         <a><img src="../assets/card_personalite.svg"></a>
                     </div>
+                    <!-- Cards clickaveis -->
 
+                    <!-- Modal card personalité -->
                     <div class="modal-container " id="modalRechargePersonalite">
                         <div class="modal">
                             <p class="ticket-code">Código do bilhete</p>
@@ -110,6 +115,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Modal card personalité -->
+
+                    <!-- Modal card créditos -->
                     <div class="modal-container " id="modalRechargeCreditos">
                         <div class="modal">
                             <p class="ticket-code">Código do bilhete</p>
@@ -152,9 +160,11 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Modal card créditos -->
                 </section>
             </section>  
             
+            <!-- Informações -->
             <section class="actions types">
                 <h1>Nossos Bilhetes</h1>
 
@@ -176,8 +186,10 @@
                     </li>
                 </ul>
             </section>
+            <!-- Informações -->
         </main>
 
+        <!-- Footer -->
         <footer>
             <div class="container-footer">
                 <nav class="nav-footer">
@@ -187,14 +199,13 @@
                 </nav>
 
                 <div class="row-footer">
+                    
                     <div class="footer-col">
-                        <h4>Conheça-nos</h4>
+                        <h4>Sobre o Transcar</h4>
                         <ul>
                             <li><a href="#">Sobre nos</a></li>
                             <li><a href="#">Contato</a></li>
-                            <li><a href="#">Nossos valores</a></li>
-                            <li><a href="#">Nossa missão</a></li>
-                            <li><a href="#">Nossa visão</a></li>
+                            <li><a href="#">Responsabilidades</a></li>
                             <li><a href="#">Trabalhe conosco</a></li>
                         </ul>
                     </div>
@@ -204,8 +215,8 @@
                         <ul>
                             <li><a href="#">Como funcionam</a></li>
                             <li><a href="generate.html">Gerar novo bilhete</a></li>
-                            <li><a href="recarga.html">Recarregar bilhete</a></li>
-                            <li><a href="utilizacao.html">Utilizar Bilhetes</a></li>
+                            <li><a href="recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="usage.html">Utilizar Bilhetes</a></li>
                             <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>
@@ -221,7 +232,9 @@
                 </div>
             </div>
         </footer>
+        <!-- Footer -->
 
+        <!-- Modal de sucesso -->
         <div id="modalMensagemSuccess" style="display: none;">    
             <div class="container">
                 <div class="bar-modal">
@@ -236,7 +249,9 @@
                 </div>
             </div>
         </div>
+        <!-- Modal de sucesso -->
 
+        <!-- Modal de erro -->
         <div id="modalMensagemError" style="display: none;">    
             <div class="container">
                 <div class="bar-modal">
@@ -251,6 +266,7 @@
                 </div>
             </div>
         </div>
+        <!-- Modal de erro -->
     </body>
 
     <script src="../js/interacao_card.js"></script>
