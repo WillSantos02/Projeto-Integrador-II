@@ -1,94 +1,4 @@
-/** Configuracoes gerais **/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
-
-@media (prefers-reduced-motion: no-preference){
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    :target{
-        scroll-margin-top: 15px;  
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
-}
-
-/** Estilizacao de Navbar**/
-.logo:hover {
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #1E1E1E;
-    height: 9.28vh;
-}
-.nav-list {
-    font-weight: 200;
-    list-style: none;
-    display: flex;
-}
-.nav-list li {
-    margin-left: 35px;
-}
-.nav-list li a{
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}.nav-list li a:hover{
-    opacity: 0.7;
-}
-.btn-nav {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100px;
-    height: 40px;
-
-    background: transparent;
-    color: white;
-    border: 1px solid #FFFFFF;
-    border-radius: 30px;
-
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-nav:hover {
-    opacity: 0.7;
-}
-.purple {
-    border: none;
-    background-color: #BB86FC;
-    font-weight: 400;
-}
-
-.disable {
-    color: #fff;
-    text-decoration: none;
-    opacity: 0.5;
-}
-
-/** Estlizacao do conteudo da pagina **/
-main {
-    background: #222;
-}
-
-section {
-    background-image: url('');
-    display: flex;
-    justify-content: center;
-}
-
-/** Estilizacao da apresentacao dos cards **/
+/** Cards **/
 .card {
     margin-top: 60px;
     margin-bottom: 50px;
@@ -109,8 +19,9 @@ h1 {
     font-weight: 300;
     font-size: 31px;
 }
+/** Cards **/
 
-/** Estilizacao dos itens de Acoes rapidas / Tipos / Sobre nos **/
+/** Ações rápidas **/
 .actions {
     display: grid;
 }
@@ -125,11 +36,9 @@ h1 {
     margin-left: 10px;
     margin-right: 10px;
 }
-.action-btn {
-    width: 110px;
-    height: 30px;
-}
+/** Ações rápidas **/
 
+/** Tipos **/
 .types {
     margin-top: 50px;
 }
@@ -146,7 +55,8 @@ h1 {
     margin-right: 30px;
 }
 .text-infos h1{
-    color: #7F39FB;
+    color: #BB86FC;
+    font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -156,12 +66,9 @@ h1 {
     color: #FFFFFF;
     margin-bottom: 20px;
 }
-.text-btn {
-    font-size: small;
-    width: 120px;
-    height: 30px;
-}
+/** Tipos **/
 
+/** Sobre **/
 .about-container {
     display: grid;
     justify-content: center;
@@ -176,58 +83,4 @@ h1 {
     color: #FFFFFF;
     width: 460px;
     margin-bottom: 50px;
-}
-
-/** Estilizacao roda pé **/
-footer{
-    background-color: #1E1E1E;
-    padding-bottom: 20px;
-}
-.nav-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #262626;
-    height: 50px
-}
-
-.container-footer{
-    width: 100%;
-    margin: auto;
-}
-.row-footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.footer-col{
-    width: 200px;
-    margin-left: 20px;
-}
-.footer-col h4{
-    font-size: 16px;
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 500;
-    position: relative;
-}
-.footer-col ul{
-    list-style: none;
-}
-.footer-col ul li{
-    margin: 10px 0;
-}
-.footer-col ul li a{
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    font-weight: 100;
-    display: block;
-    transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-    opacity: 0.7;
-    padding-left: 10px;
 }

@@ -4,9 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="../css/configs.css">
         <link rel="stylesheet" href="../css/generate.css">
+        <link rel="stylesheet" href="../css/navbar.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/termUseModal.css">
+
         <link rel="stylesheet" href="../css/tooltip.css">
         <link rel="stylesheet" href="../css/scrollbar.css">
+        
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
         <script src="../js/copyFunction.js"></script>
@@ -31,7 +37,7 @@
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav purple">
+                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav">
                                 Bilhetes
                             </button>
                         </div>
@@ -42,7 +48,7 @@
         <!-- Navbar -->
 
         <main>
-            <section class="code-generate disabled" id="qrCodeSection">
+            <section class="code-generate" id="qrCodeSection">
                 <h1>Gerar novo bilhete</h1>
 
                 <img class ="qr-code"src="https://api.qrserver.com/v1/create-qr-code/?data=qrcode_example&size=183x183" alt="qr code" id="qrCodeImg"/>
@@ -60,11 +66,15 @@
 
                 <div class="buttons">
                     <form action="" method="post">
-                        <a class="btnext btn-nav purple generate">Gerar código</a>
+                        <button type="button" class="generic-btn generate-btn">
+                            Gerar código
+                        </button>
                     </form>
 
                     <form action="" method="post">
-                        <a class="btnext btn-nav generate recarga" href="recharge.html">Recarregar</a>
+                        <button type="button" onclick="location.href='recharge.html'" class="generic-btn recharge-btn">
+                            Recarregar
+                        </button>
                     </form>
                 </div>
             </section>
@@ -127,12 +137,12 @@
                 </div>
                 
                 <div class="modal-footer">
-                    <a class="btn-nav purple generate btn-modal-confirm" id="btnGenerate">
+                    <button type="button" class="generic-btn modal-btn" id="btnGenerate">
                         Confirmar
-                    </a>
-                    <a class="btn-nav generate btn-modal-cancel" id="cancel">
+                    </button>
+                    <button type="button" class="generic-btn modal-btn" id="cancel">
                         Cancelar
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
