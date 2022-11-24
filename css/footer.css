@@ -9,6 +9,18 @@ footer{
     background: #262626;
     height: 50px
 }
+.nav-list-footer li {
+    font-weight: 200;
+    list-style: none;
+}
+.nav-list-footer li>a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-list-footer li>a:hover{
+    opacity: 0.7;
+}
 
 .container-footer{
     width: 100%;
