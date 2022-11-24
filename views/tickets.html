@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/configs.css">
+        <link rel="stylesheet" href="../css/tickets.css">
         <link rel="stylesheet" href="../css/navbar.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/scrollbar.css">
@@ -39,8 +40,23 @@
         <!-- Navbar -->
 
         <main>
-            <section>
+            <section class="tickets-actions">
                 <h1>O que deseja fazer ?</h1>
+                <div class="subtext">
+                    <hr class="line"><h1>Ações</h1><hr class="line">
+                </div>
+                
+                <button type="button" onclick="loction.href='#'" class="generic-btn">Meu Bilhete</button>
+                <button type="button" onclick="loction.href='#'" class="generic-btn">Usar Bilhete</button>
+                <button type="button" onclick="loction.href='generate.html'" class="generic-btn">Criar Bilhete</button>
+                <button type="button" onclick="loction.href='recharge.html'" class="generic-btn" id="recharge">Recarregar Bilhete</button>  
+
+                <div class="subtext">
+                    <hr class="line"><h1>Relatórios</h1><hr class="line">
+                </div>
+
+                <button class="generic-btn">Rel. de Uso</button>
+                <button class="generic-btn" id="rel-recarga">Rel. de Recarga</button>
             </section>
         </main>
 
