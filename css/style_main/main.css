@@ -22,27 +22,28 @@ h1 {
 /** Cards **/
 
 /** Ações rápidas **/
-.actions {
+.quick-actions {
     display: grid;
 }
-.action-buttons {
+.quick-actions-buttons {
     margin-top: 20px;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.action-buttons li {
+.quick-actions-buttons li {
     margin-left: 10px;
     margin-right: 10px;
 }
 /** Ações rápidas **/
 
 /** Tipos **/
-.types {
+.ticket-type {
+    display: grid;
     margin-top: 50px;
 }
-.texts {
+.ticket-type-text {
     list-style: none;
     display: flex;
 }

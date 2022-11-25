@@ -31,7 +31,7 @@
 }
 
 .flip-card-back {
-  background-image: url('../assets/flip-card-bg.svg');
+  background-image: url('../../assets/cards/flip-card-bg.svg');
   color: white;
   transform: rotateY(180deg);
 }
