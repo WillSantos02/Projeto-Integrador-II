@@ -2,6 +2,8 @@ h1{
     color: white;
     font-weight: 100;
     margin-top: 50px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 h1+input{
@@ -10,7 +12,7 @@ h1+input{
 }
 
 .title-myticket{
-   padding: 20px 20px 20px 10px; 
+   padding: 10px 10px 10px 20px; 
    color: white;
    list-style: none;
 }
@@ -37,17 +39,28 @@ h1+input{
 .content{
     display: flex;
     flex-direction: column;
-}
-
-.mytickets-btn{
-    display: flex;
-    flex-direction: row;
+    margin-top: -20px;
 }
 
 .info-container{
     border: 1px solid white;
     border-radius: 10px;
-    width: 300px;
+    width: 307px;
+}
+
+.mytickets-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generic-btn{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 150px;
 
 }
 
