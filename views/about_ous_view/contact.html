@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../../css/contact.css">
+        
+        <link rel="stylesheet" href="../../css/style_configs/configs.css">
+        <link rel="stylesheet" href="../../css/style_configs/navbar.css">
+        <link rel="stylesheet" href="../../css/style_configs/footer.css">
+        <link rel="stylesheet" href="../../css/style_configs/scrollbar.css">
+
+        <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+
+        <title>Contato</title>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav>
+                <abbr title="Ir para Home">
+                    <img class="logo" id="navbar" src="../../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../../index.html'">
+                </abbr>
+
+                <ul class="nav-list">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#">Sobre <img src="../../assets/icons/dropdown_menu_icon.svg"> </a></li>
+                    <li class="disable">Para empresas</li>
+                </ul>
+
+                <ul class="nav-list">
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='../tickets.html'" class="btn-nav">
+                                Bilhetes
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Navbar -->
+
+        <main>
+            <section class="contact-container">
+                <section class="contact-content">
+                    <div class="contact-img">
+                        <img src="../../assets/people_contact.png" alt="people making contact">
+                    </div>
+    
+                    <div class="contact-form-container">
+                        <div class="contact-form-title">
+                            <h1>Entre em contato</h1>
+                            <h2>Através do fomulário abaixo, preenchendo todas as informações.</h2>
+                        </div>
+    
+                        <div class="contact-form">
+                            <form>
+                                <div class="form-item-label">
+                                    <label for="name">Seu nome:</label>
+                                    <label for="email"><span>*</span>Seu e-mail:</label>
+                                    <label for="tel">Contato:</label>
+                                    <label for="subject"><span>*</span>Assunto:</label>
+                                    <label for="message"><span>*</span>Mensagem:</label>
+                                </div>
+                                <div class="form-item-inputs">
+                                    <input type="text" name="name" id="userName" placeholder="Ex: Marcus Miller">
+                                    <input type="email" name="email" id="userEmail" placeholder="Ex: people.human@gmail.com">
+                                    <div class="input-tell">
+                                        <input type="number" name="tel" id="telDDD" maxlength="3" placeholder="011"><input type="number" name="tel" id="userTel" maxlength="10" placeholder="12345-1234">
+                                    </div>
+                                    <select name="subject" id="messageSubject">
+                                        <option value="vagas">Código inválido</option>
+                                        <option value="vagas">Empresas</option>
+                                        <option value="vagas">Recargas</option>
+                                        <option value="vagas">Suporte</option>
+                                        <option value="vagas">Vagas remotas</option>
+                                        <option value="vagas">Outros</option>
+                                    </select>
+                                    <textarea name="message" id="userMessage" cols="33" rows="5">
+    
+                                    </textarea>
+                                </div>
+                            </form>
+                            <hr>
+                            <div class="contact-form-button">
+                                <button class="form-submit" type="submit">Envia Formulário</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-list-footer">
+                        <li><a href="#navbar">Voltar ao inicio</a></li>
+                    </ul>
+                </nav>
+
+                <div class="row-footer">
+                    
+                    <div class="footer-col">
+                        <h4>Sobre o Transcar</h4>
+                        <ul>
+                            <li><a href="aboutOus.html">Sobre nos</a></li>
+                            <li><a href="contact.html">Contato</a></li>
+                            <li><a href="transcar-responsabilities.html">Responsabilidades</a></li>
+                            <li><a href="careers.html">Trabalhe conosco</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Bilhetes</h4>
+                        <ul>
+                            <li><a href="#">Como funcionam</a></li>
+                            <li><a href="../generate.html">Gerar novo bilhete</a></li>
+                            <li><a href="../recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="../usage.html">Utilizar Bilhetes</a></li>
+                            <li><a href="#">Relatório de uso</a></li>
+                            <li><a href="#">Rel. de recarga</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Para empresas</h4>
+                        <ul>
+                            <li><a href="#">Transcar e seu negócio</a></li>
+                            <li><a href="#">Comprar para sua empresa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </body>
+</html>

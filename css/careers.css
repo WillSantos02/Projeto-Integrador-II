@@ -1,0 +1,70 @@
+.careers-content {
+    margin-top: 94px;
+    margin-bottom: 95px;
+}
+
+.careers-img img {
+    width: 300px;
+    height: 269px;
+    margin-right: 50px;
+}
+
+.careers-form-container {
+    margin-top: 15px;
+    width: 438px;
+    height: 238px;
+}
+
+.careers-form-title h1 {
+    width: 320px;
+    height: 76px;
+    font-size: 31px;
+    font-weight: 300;
+    color: white;
+}
+#logo1 {
+    font-weight: 600;
+}
+
+.careers-form-texts p {
+    margin-top: 20px;
+    width: 320px;
+    height: 72px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.careers-form {
+    margin-top: 20px;
+    width: 438px;
+    height: 50px;
+}
+
+.careers-form input[type="email"]{
+    width: 320px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.careers-form button{
+    width: 98px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: #BB86FC;
+    border: none;
+    color: white;
+    font-weight: 200;
+    font-size: 15;
+    transition: .3s;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.careers-form button:hover{
+    opacity: 0.7;
+}

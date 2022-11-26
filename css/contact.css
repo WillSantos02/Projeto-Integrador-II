@@ -1,0 +1,135 @@
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-content{
+    margin-top: 50px;
+}
+
+.contact-img img{
+    width: 460px;
+    height: 515px;
+    margin-top: 20px;
+    margin-right: 164px;
+    margin-bottom: 80px;
+}
+
+.contact-form-title h1, h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+.contact-form-title h2{
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.contact-form form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.contact-form span{
+    color: red;
+    font-weight: 500;
+}
+
+.contact-form{
+    margin-top: 15px;
+}
+
+.form-item-label, .form-item-inputs{
+    display: grid;
+}
+.form-item-label {
+    margin-right: 11px;
+}
+
+label[for="name"]{
+    margin-top: 9px;
+}
+label[for="email"]{
+    margin-top: -33px;
+}
+label[for="tel"]{
+    margin-top: -48px;
+}
+label[for="subject"]{
+    margin-top: -65px;
+}
+label[for="message"]{
+    margin-top: -80px;
+}
+
+.form-item-inputs input{
+    border: 1px solid #5B26C2;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width: 360px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+.input-tell #telDDD{
+    width: 60px;
+    height: 40px;
+    margin-right: 10px;
+}
+.input-tell #userTel, #messageSubject{
+    border: 1px solid #5B26C2;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width: 148px;
+    height: 40px;
+}
+#messageSubject{
+    padding-left: 10px;
+    width: 218px;
+    margin-bottom: 15px;
+}
+.form-item-inputs textarea{
+    padding-left: 10px;
+    border: 1px solid #5B26C2;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width: 360px;
+    height: 146px;
+    resize: none;
+    margin-bottom: 15px;
+}
+input:focus,textarea:focus,#messageSubject:focus,#userTel:focus{
+    background-color: rgba(91, 38, 194, .2);
+}
+
+hr {
+    margin-bottom: 15px;
+    border: 1px solid #5B26C2;
+}
+
+.form-submit{
+    width: 217px;
+    height: 40px;
+    background-color: rgba(91, 38, 194, .2);
+    border: 1px solid #5B26C2;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.form-submit:hover{
+    background-color: rgba(91, 38, 194, .5);
+    border: 1px solid rgba(91, 38, 194);
+}
