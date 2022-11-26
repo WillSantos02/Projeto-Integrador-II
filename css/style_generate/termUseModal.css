@@ -1,4 +1,4 @@
-.modal-container{
+.term-modal-container{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -13,26 +13,26 @@
     justify-content: center;
     align-items: center;
 }
-.modal{
+.term-modal{
     position: relative;
     background: #222;
     width: 600px;
     height: 300px;
     box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
 }
-.nav-modal {
+.nav-term-modal {
     width: 600px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.modal-title {
+.term-modal-title {
     margin-top: 0px;
     font-size: 16px;
 }
 
-.text-term {
+.term-modal-text {
     height: 220px;
     background-color: #1E1E1E;
     display: flex;
@@ -47,14 +47,14 @@ span{
     text-align: center;
 }
 
-.modal-footer {
+.term-modal-footer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 600px;
     height: 40px;
 }
-.modal-btn {
+.term-modal-btn {
     margin: 0 20px 0.5% 20px;
     border-radius: 10px;
 }
@@ -73,10 +73,10 @@ span{
     }
 }
 
-.show .modal{
-    animation: modal .3s;
+.show .term-modal{
+    animation: modal .2s;
 }
 
-.modal-container.show{
+.term-modal-container.show{
     display: flex;
 }

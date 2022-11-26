@@ -4,10 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/recharge.css">
-        <link rel="stylesheet" href="../css/scrollbar.css">
-        <link rel="stylesheet" href="../css/messageModal.css">
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+        <link rel="stylesheet" href="../css/style_recharge/recharge.css">
+        <link rel="stylesheet" href="../css/style_recharge/cardsModal.css">
+        <link rel="stylesheet" href="../css/style_recharge/messageModal.css">
+
+        <link rel="stylesheet" href="../css/style_configs/configs.css">
+        <link rel="stylesheet" href="../css/style_configs/footer.css">
+        <link rel="stylesheet" href="../css/style_configs/navbar.css">
+        <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
+        
+        <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
         
         <title>Recarga</title>
     </head>
@@ -17,19 +23,19 @@
         <header>
             <nav>
                 <abbr title="Ir para Home">
-                    <img class="logo" id="navbar" src="../assets/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../index.html'">
+                    <img class="logo" id="navbar" src="../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../index.html'">
                 </abbr>
 
                 <ul class="nav-list">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Sobre <img src="../assets/dropdown_menu_icon.svg"> </a></li>
+                    <li><a href="#">Sobre <img src="../assets/icons/dropdown_menu_icon.svg"> </a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav purple">
+                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav">
                                 Bilhetes
                             </button>
                         </div>
@@ -40,40 +46,40 @@
         <!-- Navbar -->
 
         <main>
-            <section class="code-reload">
+            <section class="reacharge-container">
                 <h1>Recarregar bilhete</h1>
                 
                 <section>
                     <!-- Cards clickaveis -->
                     <div class="card card_creditos">
-                        <a><img src="../assets/card_creditos.svg"></a>
+                        <a><img src="../assets/cards/card_creditos.svg"></a>
                     </div>
                     
                     <div class="card card_personalite">
-                        <a><img src="../assets/card_personalite.svg"></a>
+                        <a><img src="../assets/cards/card_personalite.svg"></a>
                     </div>
                     <!-- Cards clickaveis -->
 
                     <!-- Modal card personalité -->
-                    <div class="modal-container " id="modalRechargePersonalite">
-                        <div class="modal">
+                    <div class="recharge-personalite-container" id="modalRechargePersonalite">
+                        <div class="modal-content">
                             <p class="ticket-code">Código do bilhete</p>
                             <input type="text" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" maxlength="36" id="inputBilhetePersonalite" required >
                     
-                            <ul class="texts">
-                                <div class="text-infos">
-                                    <ul class="action-buttons">
+                            <ul class="buttons-container">
+                                <div class="buttons-group">
+                                    <ul>
                                         <li>
-                                            <div class="buttons btncreditos">
-                                                <button id="1d" class="btn-nav action-btn" data-value="10.27">
+                                            <div class="btncreditos">
+                                                <button id="1d" class="recharge-options action-btn" data-value="10.27">
                                                     1 dia
                                                 </button>
                                             </div>
                                         </li>
                     
                                         <li>
-                                            <div class="buttons btncreditos">
-                                                <button id="7d" class="btn-nav action-btn" data-value="71.89">
+                                            <div class="btncreditos">
+                                                <button id="7d" class="recharge-options action-btn" data-value="71.89">
                                                     7 dias
                                                 </button>
                                             </div>
@@ -81,18 +87,18 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="text-infos">
-                                    <ul class="action-buttons">
+                                <div class="buttons-group">
+                                    <ul>
                                         <li>
-                                            <div class="buttons btncreditos">
-                                                <button id="3d" class="btn-nav action-btn" data-value="30.81">
+                                            <div class="btncreditos">
+                                                <button id="3d" class="recharge-options action-btn" data-value="30.81">
                                                     3 Dias
                                                 </button>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="buttons btncreditos">
-                                                <button id="14d" class="btn-nav action-btn" data-value="143.78">
+                                            <div class="btncreditos">
+                                                <button id="14d" class="recharge-options action-btn" data-value="143.78">
                                                     14 Dias
                                                 </button>
                                             </div>
@@ -101,18 +107,18 @@
                                 </div>
                             </ul>
                         
-                            <div class="buttons btncreditos">
-                                <a id="30d" class="btn-nav action-btn thirty" data-value="308.1">
+                            <div class="btncreditos">
+                                <button id="30d" class="recharge-options center action-btn" data-value="308.1">
                                     30 Dias
-                                </a>
+                                </button>
                             </div>
 
                             <div class="valor">
                                 <label>Valor: <input type="text" readonly placeholder="R$10,00" class="valorRecarga"></label>
                             </div>
 
-                            <div class="buttons">
-                                <button id="btnRecargaPersonalite" class="btnext btn-nav purple generate recharge">
+                            <div>
+                                <button id="btnRecargaPersonalite" class="recharge-options generate">
                                     Recarregar
                                 </button>
                             </div>
@@ -121,17 +127,17 @@
                     <!-- Modal card personalité -->
 
                     <!-- Modal card créditos -->
-                    <div class="modal-container " id="modalRechargeCreditos">
-                        <div class="modal">
+                    <div class="recharge-credits-container " id="modalRechargeCreditos">
+                        <div class="modal-content">
                             <p class="ticket-code">Código do bilhete</p>
                             <input type="text" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" id="inputBilheteCreditos" required>
                     
-                            <ul class="texts">
-                                <div class="text-infos">
-                                    <ul class="action-buttons">
+                            <ul class="buttons-container">
+                                <div class="buttons-group">
+                                    <ul>
                                         <li>
                                             <div class="buttons btncreditos">
-                                                <button id="u" class="btn-nav action-btn" data-value="3.26">
+                                                <button id="u" class="recharge-options action-btn" data-value="3.26">
                                                     Único
                                                 </button>
                                             </div>
@@ -139,11 +145,11 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="text-infos">
-                                    <ul class="action-buttons">
+                                <div class="buttons-group">
+                                    <ul>
                                         <li>
                                             <div class="buttons btncreditos">
-                                                <button id="d" class="btn-nav action-btn" data-value="6.52">
+                                                <button id="d" class="recharge-options action-btn" data-value="6.52">
                                                     Duplo
                                                 </button>
                                             </div>
@@ -157,7 +163,7 @@
                             </div>
 
                             <div class="buttons">
-                                <button id="btnRecargaCreditos" class="btnext btn-nav purple generate recharge">
+                                <button id="btnRecargaCreditos" class="recharge-options generate">
                                     Recarregar
                                 </button>
                             </div>
@@ -168,12 +174,12 @@
             </section>  
             
             <!-- Informações -->
-            <section class="actions types">
-                <h1>Nossos Bilhetes</h1>
+            <section class="info-container">
+                <h1>Como funcionam ?</h1>
 
-                <ul class="texts-rec">
+                <ul class="info-list">
                     <li>
-                        <div class="text-rec">
+                        <div class="informations">
                             <h1>Créditos</h1>
 
                             <p>Ao utilizar o bilhete créditos terá passe livre para usar todos os transportes públicos disponíveis durante 40 minutos, após que o tempo tenha passado um novo crédito será debitado. As opções disponíveis  único, o duplo e personalizado.</p>
@@ -181,7 +187,7 @@
                     </li>
                     
                     <li>
-                        <div class="text-rec">
+                        <div class="informations">
                             <h1>Personalitè</h1>
 
                             <p>De acordo com a sua escolha de um tempo pré-definido, sendo eles: 7, 14 e 30 dias, ao utilizar terá passe livre durante o tempo escolhido.</p>
@@ -206,10 +212,10 @@
                     <div class="footer-col">
                         <h4>Sobre o Transcar</h4>
                         <ul>
-                            <li><a href="#">Sobre nos</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Responsabilidades</a></li>
-                            <li><a href="#">Trabalhe conosco</a></li>
+                            <li><a href="about_ous_view/aboutOus.html">Sobre nos</a></li>
+                            <li><a href="about_ous_view/contact.html">Contato</a></li>
+                            <li><a href="about_ous_view/transcar-responsabilities.html">Responsabilidades</a></li>
+                            <li><a href="about_ous_view/careers.html">Trabalhe conosco</a></li>
                         </ul>
                     </div>
                     
@@ -239,16 +245,16 @@
 
         <!-- Modal de sucesso -->
         <div id="modalMensagemSuccess" style="display: none;">    
-            <div class="container">
-                <div class="bar-modal">
-                    <h1 class="modal-title">Aviso de recargar !</h1>
+            <div class="message-modal-container">
+                <div class="message-bar-modal">
+                    <h1 class="message-modal-title">Aviso de recargar !</h1>
                 </div>
                 
-                <div class="mensagem">
+                <div class="modal-message">
                     <span>Bilhete recarregado com Sucesso !</span>
                 </div>
                 
-                <div class="bottom-modal sucess">
+                <div class="message-bottom-modal sucess">
                 </div>
             </div>
         </div>
@@ -256,16 +262,16 @@
 
         <!-- Modal de erro -->
         <div id="modalMensagemError" style="display: none;">    
-            <div class="container">
-                <div class="bar-modal">
-                    <h1 class="modal-title">Aviso de recargar !</h1>
+            <div class="message-modal-container">
+                <div class="message-bar-modal">
+                    <h1 class="message-modal-title">Aviso de recargar !</h1>
                 </div>
                 
-                <div class="mensagem">
+                <div class="modal-message">
                     <span>Código invalido ou inexistente</span>
                 </div>
                 
-                <div class="bottom-modal error">
+                <div class="message-bottom-modal error">
                 </div>
             </div>
         </div>

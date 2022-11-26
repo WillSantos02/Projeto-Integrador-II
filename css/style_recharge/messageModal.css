@@ -13,17 +13,17 @@
     justify-content: center;
     align-items: center;
 
-    animation: modal .3s;
+    animation: message-modal .3s;
 }
 
-.container{
+.message-modal-container{
     position: relative;
     background: #222;
     width: 600px;
     height: 180px;
     box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
 }
-.bar-modal {
+.message-bar-modal {
     width: 600px;
     height: 40px;
     display: flex;
@@ -31,20 +31,20 @@
     align-items: center;
 }
 
-.mensagem {
+.modal-message {
     height: 100px;
     background-color: #1E1E1E;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.mensagem span{
+.modal-message span{
     font-size: 25px;
     text-align: center;
     color: white;
 }
 
-.bottom-modal {
+.message-bottom-modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +60,12 @@
 
 }
 
-.modal-title {
+.message-modal-title {
     margin-top: 0px;
     font-size: 16px;
 }
 
-@keyframes modal {
+@keyframes message-modal {
     from{
         opacity: 0;
         transform: translate3d(0, -60px, 0);

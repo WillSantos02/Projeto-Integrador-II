@@ -4,16 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/configs.css">
-        <link rel="stylesheet" href="../css/generate.css">
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/termUseModal.css">
+        <link rel="stylesheet" href="../css/style_generate/generate.css">
+        <link rel="stylesheet" href="../css/style_generate/tooltip.css">
+        <link rel="stylesheet" href="../css/style_generate/termUseModal.css">
 
-        <link rel="stylesheet" href="../css/tooltip.css">
-        <link rel="stylesheet" href="../css/scrollbar.css">
+        <link rel="stylesheet" href="../css/style_configs/configs.css">
+        <link rel="stylesheet" href="../css/style_configs/navbar.css">
+        <link rel="stylesheet" href="../css/style_configs/footer.css">
+        <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
         
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
 
         <script src="../js/copyFunction.js"></script>
 
@@ -25,12 +25,12 @@
         <header>
             <nav>
                 <abbr title="Ir para Home">
-                    <img class="logo" id="navbar" src="../assets/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../index.html'">
+                    <img class="logo" id="navbar" src="../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../index.html'">
                 </abbr>
 
                 <ul class="nav-list">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Sobre <img src="../assets/dropdown_menu_icon.svg"> </a></li>
+                    <li><a href="#">Sobre <img src="../assets/icons/dropdown_menu_icon.svg"> </a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
@@ -59,7 +59,7 @@
                     <div class="tooltip">
                         <button class="icon-copy" onclick="myFunction()" onmouseout="outFunc()">
                             <span class="tooltiptext" id="myTooltip">Copiar</span>
-                            <img src="../assets/icon_copy.svg">
+                            <img src="../assets/icons/icon_copy.svg">
                         </button>
                     </div>
                 </div>
@@ -94,10 +94,10 @@
                     <div class="footer-col">
                         <h4>Sobre o Transcar</h4>
                         <ul>
-                            <li><a href="#">Sobre nos</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Responsabilidades</a></li>
-                            <li><a href="#">Trabalhe conosco</a></li>
+                            <li><a href="about_ous_view/aboutOus.html">Sobre nos</a></li>
+                            <li><a href="about_ous_view/contact.html">Contato</a></li>
+                            <li><a href="about_ous_view/transcar-responsabilities.html">Responsabilidades</a></li>
+                            <li><a href="about_ous_view/careers.html">Trabalhe conosco</a></li>
                         </ul>
                     </div>
                     
@@ -126,21 +126,21 @@
         <!-- Footer -->
 
         <!-- Modal termo de utilização -->
-        <div class="modal-container" id="termAcceptance">    
-            <div class="modal">
-                <div class="nav-modal">
-                    <h1 class="modal-title">Termos e Condições de Uso</h1>
+        <div class="term-modal-container" id="termAcceptance">    
+            <div class="term-modal">
+                <div class="nav-term-modal">
+                    <h1 class="term-modal-title">Termos e Condições de Uso</h1>
                 </div>
                 
-                <div class="text-term">
+                <div class="term-modal-text">
                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec leo at felis ultricies pellentesque ut eget tortor. Nunc sit amet mi sed tortor ornare mattis. Proin quis risus ac nibh fermentum ultricies pulvinar at diam. Phasellus vestibulum sit amet eros quis lacinia. Phasellus sagittis, neque et vestibulum interdum, sapien tortor malesuada leo, nec tempus nibh dolor egestas metus. Curabitur ornare at nulla sodales pellentesque. Aenean tristique sodales metus sed rutrum. Sed egestas sem mauris, sagittis dapibus nibh malesuada in. Ut et tortor condimentum, posuere neque lacinia, condimentum nisl. Proin nec gravida neque. Fusce molestie egestas tellus, eget semper ex volutpat a. Aliquam felis tellus, pretium eu ante eu, feugiat auctor diam.</span>
                 </div>
                 
-                <div class="modal-footer">
-                    <button type="button" class="generic-btn modal-btn" id="btnGenerate">
+                <div class="term-modal-footer">
+                    <button type="button" class="generic-btn term-modal-btn" id="btnGenerate">
                         Confirmar
                     </button>
-                    <button type="button" class="generic-btn modal-btn" id="cancel">
+                    <button type="button" class="generic-btn term-modal-btn" id="cancel">
                         Cancelar
                     </button>
                 </div>
