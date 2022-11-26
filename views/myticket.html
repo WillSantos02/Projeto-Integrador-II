@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="../css/navbar.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/scrollbar.css">
+
+        <link rel="stylesheet" href="../css/modalUse.css">
         
         <title>Bilhetes</title>
     </head>
@@ -63,8 +65,12 @@
                             
                         </ul>
                         <div class="mytickets-btn">
-                            <button type="button" onclick="location.href='recharge.html'" class="generic-btn">Recarregar Bilhete</button>
-                            <button type="button" onclick="location.href='#.html'" class="generic-btn">Utilizar Bilhete</button>
+                            <button type="button" onclick="location.href='recharge.html'" class="generic-btn">
+                                Recarregar Bilhete
+                            </button>
+                            <button type="button" class="generic-btn use-btn">
+                                Utilizar Bilhete
+                            </button>
                        </div>
                     </section>
                 </section>
@@ -115,6 +121,45 @@
         </footer>
         <!-- Footer -->
 
+        <!-- Modal termo de utilização -->
+        <div class="modal-container" id="useTicket">    
+            <div class="modal">
+                <div class="nav-modal">
+                    <h1 class="modal-title">Utilização do Bilhete</h1>
+                </div>
+                
+                <div class="text-term">
+                    <div class="dropTransp">
+                        <button onclick= "btnTransports()" class="dropBtn">Meio de Transporte</button>
+                            <div id="dropDownTrans"class="valueDrop">
+                                <a href="#Bus">Ônibus</a>
+                                <a href="#Subway">Metrô</a>
+                                <a href="#Train">Trem</a>    
+                            </div>
+                    </div>
+                    <div class="dropLocat">
+                        <button onclick= "btnLocation()" class="dropBtn">Local de Uso</button>
+                            <div id="dropDownLocat"class="valueDrop">
+                                <a href="#Campinas">Campinas - SP</a>
+                                <a href="#Hortolandia">Hortôlandia - SP</a>
+                                <a href="#Sumare">Sumaré - SP</a>    
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="generic-btn modal-btn" id="btnGenerate">
+                        Confirmar
+                    </button>
+                    <button type="button" class="generic-btn modal-btn" id="cancel">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal termo de utilização -->
 
+        <script src="../js/modalUse.js"></script>
+        <script src="../js/dropdown.js"></script>
     </body>
 </html>
