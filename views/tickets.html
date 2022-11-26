@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/configs.css">
-        <link rel="stylesheet" href="../css/tickets.css">
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/scrollbar.css">
+        <link rel="stylesheet" href="../css/style_tickets/tickets.css">
+        <link rel="stylesheet" href="../css/style_configs/configs.css">
+        <link rel="stylesheet" href="../css/style_configs/navbar.css">
+        <link rel="stylesheet" href="../css/style_configs/footer.css">
+        <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
+
+        <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
         
         <title>Bilhetes</title>
     </head>
@@ -17,19 +19,19 @@
         <header>
             <nav>
                 <abbr title="Ir para Home">
-                    <img class="logo" id="navbar" src="../assets/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../index.html'">
+                    <img class="logo" id="navbar" src="../../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../../index.html'">
                 </abbr>
 
                 <ul class="nav-list">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Sobre <img src="../assets/dropdown_menu_icon.svg"> </a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#">Sobre <img src="../../assets/icons/dropdown_menu_icon.svg"> </a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav purple">
+                            <button type="button" onclick="location.href='../tickets.html'" class="btn-nav">
                                 Bilhetes
                             </button>
                         </div>
@@ -74,10 +76,10 @@
                     <div class="footer-col">
                         <h4>Sobre o Transcar</h4>
                         <ul>
-                            <li><a href="#">Sobre nos</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Responsabilidades</a></li>
-                            <li><a href="#">Trabalhe conosco</a></li>
+                            <li><a href="about_ous_view/aboutOus.html">Sobre nos</a></li>
+                            <li><a href="about_ous_view/contact.html">Contato</a></li>
+                            <li><a href="about_ous_view/transcar-responsabilities.html">Responsabilidades</a></li>
+                            <li><a href="about_ous_view/careers.html">Trabalhe conosco</a></li>
                         </ul>
                     </div>
                     
@@ -85,9 +87,9 @@
                         <h4>Bilhetes</h4>
                         <ul>
                             <li><a href="#">Como funcionam</a></li>
-                            <li><a href="generate.html">Gerar novo bilhete</a></li>
-                            <li><a href="recharge.html">Recarregar bilhete</a></li>
-                            <li><a href="usage.html">Utilizar Bilhetes</a></li>
+                            <li><a href="../generate.html">Gerar novo bilhete</a></li>
+                            <li><a href="../recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="../usage.html">Utilizar Bilhetes</a></li>
                             <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>
@@ -104,7 +106,5 @@
             </div>
         </footer>
         <!-- Footer -->
-
-
     </body>
 </html>
