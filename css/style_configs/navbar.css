@@ -1,10 +1,14 @@
+.logo {
+    margin-right: 140px;
+}
+
 .logo:hover {
     cursor: pointer;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background: #1E1E1E;
     height: 9.28vh;
@@ -15,7 +19,7 @@ nav {
     display: flex;
 }
 .nav-list li {
-    margin-left: 35px;
+    margin-left: 40px;
 }
 .nav-list li a{
     color: #fff;
@@ -30,12 +34,13 @@ nav {
     align-items: center;
     justify-content: center;
 
-    width: 100px;
-    height: 40px;
+    width: 153px;
+    height: 44px;
+    margin-left: 140px;
 
-    background-color: #BB86FC;
+    background-color: #635CCE;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     border: none;
     border-radius: 30px;
 

@@ -9,14 +9,14 @@
 h1 {
     margin-top: 50px;
     text-align: center;
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: 300;
     font-size: 31px;
 }
 
 .action-btn.btn-selected{
-    background-color: #BB86FC;
+    background-color: #635CCE;
 }
 
 .selecionado {
@@ -59,12 +59,12 @@ h1 {
     margin-right: 30px;
 }
 .informations h1{
-    color: #BB86FC;
+    color: #635CCE;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .informations p {
     text-align: center;
-    color: #FFFFFF;
+    color: white;
     margin-bottom: 20px;
 }

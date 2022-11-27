@@ -2,7 +2,7 @@ p.ticket-code {
     border: none;
     font-size: 14;
     font-weight: 100;
-    color: #FFFFFF;
+    color: white;
     text-align: center;
 }
 input {
@@ -11,9 +11,9 @@ input {
     margin-top: 10px; 
     padding: 10px;
     text-align: center;
-    border: 1px solid #FFFFFF;
+    border: 1px solid white;
     border-radius: 10px;
-    color: #FFFFFF;
+    color: white;
     background: transparent;
     margin-left: auto;
     margin-right: auto;
@@ -80,7 +80,7 @@ label {
     transition: 0.3s;
 }
 .recharge-options:hover{
-    background-color: #BB86FC;
+    background-color: #635CCE;
     opacity: 0.7;
 }
 .recharge-options.center{

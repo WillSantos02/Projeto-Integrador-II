@@ -18,7 +18,7 @@ h1+input{
 }
 
 .title-myticket span {
-    color: #BB86FC;
+    color: #635CCE;
 }
 
 .myticket{
@@ -72,8 +72,8 @@ input {
     padding: 10px 10px 10px 10px;
 
     background-color: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid white;
     border-radius: 10px;
     
-    color: #FFFFFF;
+    color: white;
 }

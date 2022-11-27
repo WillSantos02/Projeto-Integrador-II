@@ -14,7 +14,7 @@ footer{
     list-style: none;
 }
 .nav-list-footer li>a{
-    color: #fff;
+    color: white;
     text-decoration: none;
     transition: 0.3s;
 }

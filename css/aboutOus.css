@@ -21,7 +21,7 @@
 .about-ous-title span{
     font-weight: 600;
     font-size: 52px;
-    color: #BB86FC;
+    color: #635CCE;
 }
 #logo1{
     color: white;
@@ -63,11 +63,11 @@
     margin-top: 25px;
     font-size: 20px;
     font-weight: 400;
-    color: #7F39FB;
+    color: #635CCE;
     cursor: pointer;
     transition: .2s;
 }
 .about-ous-content-link:hover{
-    color: #9156f9;
+    opacity: 0.7;
     text-decoration: underline;
 }
