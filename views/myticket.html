@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/configs.css">
+
         <link rel="stylesheet" href="../css/myticket.css">
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/scrollbar.css">
+
+        <link rel="stylesheet" href="../css/style_configs/configs.css">
+        <link rel="stylesheet" href="../css/style_configs/navbar.css">
+        <link rel="stylesheet" href="../css/style_configs/footer.css">
+        <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
         
-        <title>Bilhetes</title>
+        <title>Meu bilhete</title>
     </head>
 
     <body>
@@ -29,7 +31,7 @@
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='../tickets.html'" class="btn-nav">
+                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav">
                                 Meu bilhete
                             </button>
                         </div>
@@ -40,38 +42,46 @@
         <!-- Navbar -->
 
         <main>
-            <section class="myticket">
-
-                <h1>Meu bilhete</h1>
-                
-                <section>
-                    <div class="card-container">
-                        <img src="../assets/cards/flip-card-bg.svg">
+            <section>
+                <div class="myticket-header">
+                    <div class="myticket-header-title">
+                        <h1>Meu Bilhete</h1>
                     </div>
 
-                    <section class="content">
-                        <div class="myticket-header">
-                            <h1>Código do Bilhete</h1>
-                            <input type="text">
+                    <div>
+                        <div class="myticket-content-mainpage">
+                            <div class="myticket-card">
+                                <img src="../assets/cards/flip-card-bg.svg" alt="Cartão">
+                            </div>
+
+                            <div class="myticket-content-form">
+                                <h2>Código do Bilhete</h2>
+
+                                <input type="text" placeholder="xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx">
+                                
+                                <div class="myticket-form-box">
+                                    <div class="form-box-item">
+                                        <p>Minha recarga está ativa: <span>Sim</span></p>
+                                    </div>
+                                    <div class="form-box-item">
+                                        <p>Tipo de recarga ativo: <span>Único</span></p>
+                                    </div>
+                                    <div class="form-box-item">
+                                        <p>Minha recarga está vencida: <span>Não</span></p>
+                                    </div>
+                                    <div class="form-box-item">
+                                        <p>Quando minha recarga vence: <br><span>Tue Nov 22 2022 17:45:58</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="myticket-form-buttons">
+                                    <button type="button" class="generic-btn" id="rechargeBtn">Recarregar bilhete</button>
+                                    <button type="button" class="generic-btn" id="useBtn">Utilizar bilhete</button>
+                                </div>
+                            </div>
                         </div>
-    
-                        <ul class="info-container">
-                            
-                            <li class="title-myticket">Status de recarga: <span>Não</span></li>
-                            <li class="title-myticket">Tipo de recarga ativa: <span>Não</span></li>
-                            <li class="title-myticket">Data de expiração da recarga: <span>24/11/2022 at 21:52pm</span></li>
-                            
-                        </ul>
-                        <div class="mytickets-btn">
-                            <button type="button" onclick="location.href='recharge.html'" class="generic-btn">
-                                Recarregar Bilhete
-                            </button>
-                            <button type="button" class="generic-btn use-btn">
-                                Utilizar Bilhete
-                            </button><h1></h1>
-                       </div>
-                    </section>
-                </section>
+                    </div>
+                </div>
             </section>
         </main>
          
@@ -85,7 +95,6 @@
                 </nav>
 
                 <div class="row-footer">
-                    
                     <div class="footer-col">
                         <h4>Sobre o Transcar</h4>
                         <ul>
@@ -119,7 +128,5 @@
             </div>
         </footer>
         <!-- Footer -->
-
-
     </body>
 </html>

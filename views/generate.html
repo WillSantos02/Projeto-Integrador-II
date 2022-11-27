@@ -158,6 +158,7 @@
             createTicketBtn.addEventListener('click', async () => {
                 let newTicketCode = await createTicket();
 
+                console.log(newTicketCode)
                 qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${newTicketCode.TICKET_ID}&size=183x183`;
 
                 ticketCode.value = newTicketCode.TICKET_ID || newTicketCode.error;
