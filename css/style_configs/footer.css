@@ -1,20 +1,23 @@
+@import url('configs.css');
+
 footer{
-    background-color: #1E1E1E;
+    background-color: var(--bg-nav-dark);
     padding-bottom: 20px;
 }
 .nav-footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #262626;
+    background: var(--bg-footer-dark);
     height: 50px
 }
 .nav-list-footer li {
+    font-size: 16px;
     font-weight: 200;
     list-style: none;
 }
 .nav-list-footer li>a{
-    color: white;
+    color: var(--white);
     text-decoration: none;
     transition: 0.3s;
 }
@@ -38,7 +41,7 @@ footer{
 }
 .footer-col h4{
     font-size: 16px;
-    color: white;
+    color: var(--white);
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 500;
@@ -52,7 +55,7 @@ footer{
 }
 .footer-col ul li a{
     font-size: 16px;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-weight: 100;
     display: block;

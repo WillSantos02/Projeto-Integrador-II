@@ -1,3 +1,5 @@
+@import url('style_configs/configs.css');
+
 .about-ous-container {
     display: flex;
     flex-direction: column;
@@ -16,19 +18,19 @@
 .about-ous-title h1{
     font-weight: 300;
     font-size: 35px;
-    color: white;
+    color: var(--white);
 }
 .about-ous-title span{
     font-weight: 600;
     font-size: 52px;
-    color: #635CCE;
+    color: var(--purple);
 }
 #logo1{
-    color: white;
+    color: var(--white);
     font-weight: 300;
 }
 #logo2{
-    color: white;
+    color: var(--white);
 }
 
 .about-ous-content{
@@ -49,21 +51,21 @@
 .about-ous-content-title h1{
     font-weight: 600;
     font-size: 50px;
-    color: white;
+    color: var(--white);
 }
 
 .about-ous-content-paragraph p{
     margin-top: 25px;
     font-size: 20px;
     font-weight: 200;
-    color: white;
+    color: var(--white);
 }
 
 .about-ous-content-link{
     margin-top: 25px;
     font-size: 20px;
     font-weight: 400;
-    color: #635CCE;
+    color: var(--purple);
     cursor: pointer;
     transition: .2s;
 }

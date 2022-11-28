@@ -1,3 +1,5 @@
+@import url('style_configs/configs.css');
+
 .myticket-header {
     margin-top: 50px;
 }
@@ -5,7 +7,7 @@
 .myticket-header-title h1 {
     margin-bottom: 20px;
     font-size: 31px;
-    color: white;
+    color: var(--white);
     font-weight: 300;
     text-align: center;
 }
@@ -24,7 +26,7 @@
 .myticket-content-form h2 {
     margin-bottom: 10px;
     font-size: 14px;
-    color: white;
+    color: var(--white);
     font-weight: 300;
     text-align: center;
 }
@@ -34,8 +36,8 @@
     width: 307px;
     height: 30px;
     text-align: center;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid var(--white);
+    color: var(--white);
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -43,7 +45,7 @@
 .myticket-form-box {
     width: 307px;
     height: 155px;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     border-radius: 10px;
     padding-left: 20px;
     padding-top: 20px;
@@ -56,13 +58,13 @@
 }
 
 .myticket-form-box p{
-    color: white;
+    color: var(--white);
     font-size: 14px;
     font-weight: 300;
 }
 
 .myticket-form-box span{
-    color: #635CCE;
+    color: var(--purple);
     font-size: 14px;
     font-weight: 600;
 }
@@ -74,9 +76,9 @@
 
 .myticket-form-buttons .generic-btn {
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     border-radius: 10px;
-    color: white;
+    color: var(--white);
     text-align: center;
     font-size: 14px;
     font-weight: 300;

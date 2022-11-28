@@ -1,3 +1,5 @@
+@import url('../style_configs/configs.css');
+
 .term-modal-container{
     width: 100vw;
     height: 100vh;
@@ -15,7 +17,7 @@
 }
 .term-modal{
     position: relative;
-    background: #222;
+    background: var(--bg-main-dark);
     width: 600px;
     height: 300px;
     box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
@@ -34,14 +36,14 @@
 
 .term-modal-text {
     height: 220px;
-    background-color: #1E1E1E;
+    background-color: var(--bg-nav-dark);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 span{
     margin: 20px 50px 20px 50px;
-    color: white;
+    color: var(--white);
     font-size: 12px;
     font-weight: 100;
     text-align: center;

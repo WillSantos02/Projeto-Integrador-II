@@ -1,0 +1,140 @@
+@import url('style_configs/configs.css');
+
+.myTicket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.myTicket-header {
+    margin-top: 50px;
+}
+
+.myTicket-header-title {
+    width: 197px;
+    height: 39px;
+    margin-bottom: 30px;
+}
+.myTicket-header-title h1 {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.myTicket-header-text {
+    width: 449px;
+    height: 87px;
+    margin-bottom: 30px;
+}
+.myTicket-header-text p {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 300;
+    text-align: start;
+}
+.myTicket-header-text span {
+    font-weight: 400;
+}
+
+.myTicket-header-code {
+    width: 166px;
+    height: 44px;
+    margin-bottom: 50px;
+}
+
+.myTicket-header-code input {
+    width: 166px;
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.myTicket-content-cards {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 235px;
+    height: 255px;
+    margin-right: 20px;
+}
+
+.card-header-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header-icon hr {
+    margin-left: 10px;
+    width: 175px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.card-header-title {
+    margin-bottom: 20px;
+}
+
+.card-header-title h1 {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card-header-text {
+    margin-bottom: 20px;
+}
+
+.card-header-text p {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.card-header-button {
+    display: flex;
+    justify-content: start;
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 44px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid var(--white);
+    border-radius: 30px;
+    background-color: transparent;
+    padding-left: 10px;
+    transition: .3s;
+}
+.card-btn p {
+    width: 121px;
+    margin-right: 6px;
+    text-align: start;
+}
+.card-btn:hover {
+    cursor: pointer;
+    opacity: background 0.7;
+    background-color: var(--purple);
+    border: none;
+    font-size: 21px;
+}
+
+#useCard {
+    margin-right: 0px;
+}

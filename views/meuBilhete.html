@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/meuBilhete.css">
+
+        <link rel="stylesheet" href="../css/style_configs/configs.css">
+        <link rel="stylesheet" href="../css/style_configs/navbar.css">
+        <link rel="stylesheet" href="../css/style_configs/footer.css">
+        <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
+        
+        <title>Meu bilhete</title>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav>
+                <abbr title="Ir para Home">
+                    <img class="logo" id="navbar" src="../../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../../index.html'">
+                </abbr>
+
+                <ul class="nav-list">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li class="disable">Para empresas</li>
+                </ul>
+
+                <ul class="nav-list">
+                    <li>
+                        <div class="buttons">
+                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav">
+                                Meu bilhete
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Navbar -->
+
+        <main>
+            <section>
+                <div class="myTicket-container">
+                    <div class="myTicket-header">
+                        <div class="myTicket-header-title">
+                            <h1>Meu Bilhete</h1>
+                        </div>
+                        <div class="myTicket-header-text">
+                            <p>Com o código único você abre muitas portas e vai a lugares inimagináveis!<br><span>Obtenha o seu já!</span></p>
+                        </div>
+                        <div class="myTicket-header-code">
+                            <input type="text" placeholder="# Seu código">
+                        </div>
+                    </div>
+
+                    <div class="myTicket-content">
+                        <div class="myTicket-content-cards">
+                            <div class="card">
+                                <div class="card-header-icon">
+                                    <img src="../assets/icons/create_code_icon.svg"> <hr>
+                                </div>
+                                <div class="card-header-title">
+                                    <h1>Criar código</h1>
+                                </div>
+                                <div class="card-header-text">
+                                    <p>Você ainda não tem um código? Gere agora mesmo!</p>
+                                </div>
+                                <div class="card-header-button">
+                                    <button type="button" class="card-btn" id="codeGenerate"><p>Criar agora</p> <img src="../assets/icons/next_icon.svg"></button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header-icon">
+                                    <img src="../assets/icons/ticket_icon.svg"> <hr>
+                                </div>
+                                <div class="card-header-title">
+                                    <h1>Recarregar</h1>
+                                </div>
+                                <div class="card-header-text">
+                                    <p>Seu bilhete é novo ou acabou? Recarrege agora!</p>
+                                </div>
+                                <div class="card-header-button">
+                                    <button type="button" class="card-btn" id="codeGenerate"><p>Recarregar</p> <img src="../assets/icons/next_icon.svg"></button>
+                                </div>
+                            </div>
+
+                            <div class="card" id="useCard">
+                                <div class="card-header-icon">
+                                    <img src="../assets/icons/use_code_icon.svg">
+                                </div>
+                                <div class="card-header-title">
+                                    <h1>Usar bilhete</h1>
+                                </div>
+                                <div class="card-header-text">
+                                    <p>Você vai embarcar em uma viagem incrivel? Use seu bilhete aqui!</p>
+                                </div>
+                                <div class="card-header-button">
+                                    <button type="button" class="card-btn" id="codeGenerate"><p>Usar já</p> <img src="../assets/icons/next_icon.svg"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         
+        <!-- Footer -->
+        <footer>
+            <div class="container-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-list-footer">
+                        <li><a href="#navbar">Voltar ao inicio</a></li>
+                    </ul>
+                </nav>
+
+                <div class="row-footer">
+                    <div class="footer-col">
+                        <h4>Sobre o Transcar</h4>
+                        <ul>
+                            <li><a href="about_ous_view/aboutOus.html">Sobre nos</a></li>
+                            <li><a href="about_ous_view/contact.html">Contato</a></li>
+                            <li><a href="about_ous_view/transcar-responsabilities.html">Responsabilidades</a></li>
+                            <li><a href="about_ous_view/careers.html">Trabalhe conosco</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Bilhetes</h4>
+                        <ul>
+                            <li><a href="#">Como funcionam</a></li>
+                            <li><a href="../generate.html">Gerar novo bilhete</a></li>
+                            <li><a href="../recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="../usage.html">Utilizar Bilhetes</a></li>
+                            <li><a href="#">Relatório de uso</a></li>
+                            <li><a href="#">Rel. de recarga</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Para empresas</h4>
+                        <ul>
+                            <li><a href="#">Transcar e seu negócio</a></li>
+                            <li><a href="#">Comprar para sua empresa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </body>
+</html>

@@ -1,3 +1,5 @@
+@import url('style_configs/configs.css');
+
 .contact-container{
     display: flex;
     align-items: center;
@@ -17,7 +19,7 @@
 }
 
 .contact-form-title h1, h2{
-    color: white;
+    color: var(--white);
     font-size: 30px;
     font-weight: 500;
 }
@@ -31,7 +33,7 @@
     margin-top: 30px;
     display: flex;
     flex-direction: row;
-    color: white;
+    color: var(--white);
     font-size: 15px;
     font-weight: 100;
 }
@@ -69,10 +71,10 @@ label[for="message"]{
 }
 
 .form-item-inputs input{
-    border: 1px solid #635CCE;
+    border: 1px solid var(--purple);
     border-radius: 10px;
     background-color: transparent;
-    color: white;
+    color: var(--white);
     width: 360px;
     height: 40px;
     margin-bottom: 15px;
@@ -84,10 +86,10 @@ label[for="message"]{
     margin-right: 10px;
 }
 .input-tell #userTel, #messageSubject{
-    border: 1px solid #635CCE;
+    border: 1px solid var(--purple);
     border-radius: 10px;
     background-color: transparent;
-    color: white;
+    color: var(--white);
     width: 148px;
     height: 40px;
 }
@@ -98,10 +100,10 @@ label[for="message"]{
 }
 .form-item-inputs textarea{
     padding-left: 10px;
-    border: 1px solid #635CCE;
+    border: 1px solid var(--purple);
     border-radius: 10px;
     background-color: transparent;
-    color: white;
+    color: var(--white);
     width: 360px;
     height: 146px;
     resize: none;
@@ -113,16 +115,16 @@ input:focus,textarea:focus,#messageSubject:focus,#userTel:focus{
 
 hr {
     margin-bottom: 15px;
-    border: 1px solid #635CCE;
+    border: 1px solid var(--purple);
 }
 
 .form-submit{
     width: 217px;
     height: 40px;
     background-color: rgba(91, 38, 194, .2);
-    border: 1px solid #635CCE;
+    border: 1px solid var(--purple);
     border-radius: 10px;
-    color: white;
+    color: var(--white);
     font-size: 20px;
     font-weight: 300;
     text-align: center;
@@ -131,5 +133,5 @@ hr {
 }
 .form-submit:hover{
     background-color: rgba(91, 38, 194, .5);
-    border: 1px solid rgba(91, 38, 194);
+    border: 1px solid var(--white);
 }

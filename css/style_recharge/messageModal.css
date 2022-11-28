@@ -1,3 +1,5 @@
+@import url('../style_configs/configs.css');
+
 #modalMensagemSuccess, #modalMensagemError {
     width: 100vw;
     height: 100vh;
@@ -18,7 +20,7 @@
 
 .message-modal-container{
     position: relative;
-    background: #222;
+    background: var(--bg-main-dark);
     width: 600px;
     height: 180px;
     box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
@@ -33,7 +35,7 @@
 
 .modal-message {
     height: 100px;
-    background-color: #1E1E1E;
+    background-color: var(--bg-nav-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +43,7 @@
 .modal-message span{
     font-size: 25px;
     text-align: center;
-    color: white;
+    color: var(--white);
 }
 
 .message-bottom-modal {
