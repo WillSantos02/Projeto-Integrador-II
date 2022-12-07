@@ -19,19 +19,20 @@
         <header>
             <nav>
                 <abbr title="Ir para Home">
-                    <img class="logo" id="navbar" src="../../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../../index.html'">
+                    <img class="logo" id="navbar" src="../assets/logo/FASTICKET.svg" alt="Ir para Home" onclick="location.href='../index.html'">
                 </abbr>
 
                 <ul class="nav-list">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about_ous_view/aboutOus.html">Sobre</a></li>
+                    <li><a href="#">Relatórios</a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav">
+                            <button type="button" onclick="location.href='mainTicket.html'" class="btn-nav">
                                 Meu bilhete
                             </button>
                         </div>
@@ -61,21 +62,21 @@
                                 
                                 <div class="myticket-form-box">
                                     <div class="form-box-item">
-                                        <p>Minha recarga está ativa: <span>Sim</span></p>
+                                        <p>Minha recarga está ativa: <span>-</span></p>
                                     </div>
                                     <div class="form-box-item">
-                                        <p>Tipo de recarga ativo: <span>Único</span></p>
+                                        <p>Tipo de recarga ativo: <span>-</span></p>
                                     </div>
                                     <div class="form-box-item">
-                                        <p>Minha recarga está vencida: <span>Não</span></p>
+                                        <p>Minha recarga está vencida: <span>-</span></p>
                                     </div>
                                     <div class="form-box-item">
-                                        <p>Quando minha recarga vence: <br><span>Tue Nov 22 2022 17:45:58</span></p>
+                                        <p>Quando minha recarga vence: <br><span>Day Month DD AAAA HH:MM:SS</span></p>
                                     </div>
                                 </div>
 
                                 <div class="myticket-form-buttons">
-                                    <button type="button" class="generic-btn" id="rechargeBtn">Recarregar bilhete</button>
+                                    <button type="button" onclick="location.href='recharge.html'" class="generic-btn" id="rechargeBtn">Recarregar bilhete</button>
                                     <button type="button" class="generic-btn" id="useBtn">Utilizar bilhete</button>
                                 </div>
                             </div>
@@ -108,10 +109,10 @@
                     <div class="footer-col">
                         <h4>Bilhetes</h4>
                         <ul>
-                            <li><a href="#">Como funcionam</a></li>
-                            <li><a href="../generate.html">Gerar novo bilhete</a></li>
-                            <li><a href="../recharge.html">Recarregar bilhete</a></li>
-                            <li><a href="../usage.html">Utilizar Bilhetes</a></li>
+                            <li><a href="tickets.html">Ações Rápidas</a></li>
+                            <li><a href="generate.html">Gerar novo bilhete</a></li>
+                            <li><a href="recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="mainTicket.html">Utilizar Bilhetes</a></li>
                             <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>
@@ -128,5 +129,9 @@
             </div>
         </footer>
         <!-- Footer -->
+
+        <!-- Modal Utilização -->
+        
+        <!-- Modal Utilização -->
     </body>
 </html>

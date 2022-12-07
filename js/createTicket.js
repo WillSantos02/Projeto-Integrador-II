@@ -1,5 +1,5 @@
 const createTicket = async () => {
-    return await fetch('http://localhost:8080/tickets', {
+    return await fetch('http://localhost:8080/tickets/create', {
         method: 'POST',
     })
     .then(res => res.json())

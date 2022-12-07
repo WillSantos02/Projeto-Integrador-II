@@ -1,0 +1,390 @@
+@import url('style_configs/configs.css');
+
+.myTicket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.myTicket-header {
+    margin-top: 50px;
+}
+
+.myTicket-header-title {
+    width: 197px;
+    height: 39px;
+    margin-bottom: 30px;
+}
+.myTicket-header-title h1 {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.myTicket-header-text {
+    width: 449px;
+    height: 87px;
+    margin-bottom: 30px;
+}
+.myTicket-header-text p {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 300;
+    text-align: start;
+}
+.myTicket-header-text span {
+    font-weight: 500;
+}
+
+.myTicket-header-code {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    margin-bottom: 50px;
+}
+#code-message {
+    width: 371px;
+    height: 27px;
+    margin-left: 15px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    display: none;
+}
+#code-message .sucess {
+    color: #06C281;
+}
+#code-message .warning {
+    color: #F5A623;
+}
+#code-message .error {
+    color: #EF4444;
+}
+
+.search-btn {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    background-color: transparent;
+    border: none;
+    transition: .3s;
+}
+.search-btn:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.myTicket-header-code input {
+    width: 166px;
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.myTicket-content-cards {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 235px;
+    height: 255px;
+    margin-right: 20px;
+}
+
+.card-header-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header-icon hr {
+    margin-left: 10px;
+    width: 175px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.card-header-title {
+    margin-bottom: 20px;
+}
+
+.card-header-title h1 {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card-header-text {
+    margin-bottom: 20px;
+}
+
+.card-header-text p {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.card-header-button {
+    display: flex;
+    justify-content: start;
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 44px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid var(--white);
+    border-radius: 30px;
+    background-color: transparent;
+    padding-left: 15px;
+    transition: .3s;
+}
+.card-btn p {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    margin-right: 18px;
+    text-align: start;
+    transition: .3s;
+}
+.card-btn:hover {
+    cursor: pointer;
+    opacity: background 0.7;
+    background-color: var(--purple);
+    border: none;
+    width: 180px;
+}
+.card-btn p:hover {
+    margin-right: 28px;
+}
+#useCode {
+    width: 128px;
+}
+#useCode:hover {
+    width: 138px;
+}
+
+#useCard {
+    margin-right: 0px;
+}
+
+/* Modal Termo de Uso */
+
+.termUse-modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.termUse-content {
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 554px;
+    height: 665px;
+    border-radius: 20px;
+}
+
+.termUse-header {
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    width: 554px;
+    height: 208px;
+    border-radius: 20px 20px 0 0;
+}
+
+.termUse-header-title {
+    width: 368px;
+    height: 78px;
+    margin-top: 50px;
+    margin-left: 55px;
+}
+.termUse-header-title h1 {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.termUse-header-icon img {
+    margin-top: 30px;
+    margin-left: 55px;
+}
+
+.termUse-main {
+    width: 444px;
+    height: 356px;
+    margin: 50px 55px 50px 55px;
+}
+
+.termUse-main-text {
+    width: 444px;
+    height: 232px;
+}
+
+.termUse-main-text p {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.termUse-main-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.termUse-btn {
+    width: 444px;
+    height: 74px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+
+    transition: .3s;
+}
+.termUse-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+} 
+
+/* Modal Recarga - Seleção do bilhete*/
+
+.recharge-modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.recharge-content {
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 554px;
+    /* height: 700px; */
+    border-radius: 20px;
+}
+
+.recharge-header {
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    width: 554px;
+    height: 208px;
+    border-radius: 20px 20px 0 0;
+}
+
+.recharge-header-title {
+    width: 390px;
+    height: 132px;
+    margin-top: 50px;
+    margin-left: 55px;
+}
+
+.recharge-header-title h1 {
+    width: 390px;
+    height: 39px;
+
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.recharge-header-title p {
+    width: 390px;
+    height: 78px;
+    margin-top: 15px;
+
+    color: white;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.recharge-header-icon {
+    margin-top: 30px;
+    margin-left: 28px;
+}
+
+.recharge-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.recharge-cards {
+    margin-bottom: 50px;
+}
+
+.recharge-cards img{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.recharge-btn {
+    margin-bottom: 55px;
+}
+
+.rechagerCancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 444px;
+    height: 74px;
+    
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: .3s;
+}
+.rechagerCancel-btn:hover {
+    cursor: pointer;
+    font-size: 24px;
+    background: #8E2828;
+}

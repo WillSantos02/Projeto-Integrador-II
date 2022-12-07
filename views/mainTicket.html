@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/meuBilhete.css">
+        <link rel="stylesheet" href="../css/mainTicket.css">
 
         <link rel="stylesheet" href="../css/style_configs/configs.css">
         <link rel="stylesheet" href="../css/style_configs/navbar.css">
@@ -19,19 +19,20 @@
         <header>
             <nav>
                 <abbr title="Ir para Home">
-                    <img class="logo" id="navbar" src="../../assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='../../index.html'">
+                    <img class="logo" id="navbar" src="../assets/logo/FASTICKET.svg" alt="Ir para Home" onclick="location.href='../index.html'">
                 </abbr>
 
                 <ul class="nav-list">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about_ous_view/aboutOus.html">Sobre</a></li>
+                    <li><a href="#">Relatórios</a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='tickets.html'" class="btn-nav">
+                            <button type="button" onclick="location.href='mainTicket.html'" class="btn-nav">
                                 Meu bilhete
                             </button>
                         </div>
@@ -52,7 +53,15 @@
                             <p>Com o código único você abre muitas portas e vai a lugares inimagináveis!<br><span>Obtenha o seu já!</span></p>
                         </div>
                         <div class="myTicket-header-code">
-                            <input type="text" placeholder="# Seu código">
+                            <input type="text" placeholder="# Seu código" maxlength="13"> 
+                            
+                            <button type="button" class="search-btn">
+                                <img src="../assets/icons/search_icon.svg" alt="search">
+                            </button>
+
+                            <div id="code-message">
+                                <span id="message" class="">...</span>
+                            </div>
                         </div>
                     </div>
 
@@ -84,7 +93,7 @@
                                     <p>Seu bilhete é novo ou acabou? Recarrege agora!</p>
                                 </div>
                                 <div class="card-header-button">
-                                    <button type="button" class="card-btn" id="codeGenerate"><p>Recarregar</p> <img src="../assets/icons/next_icon.svg"></button>
+                                    <button type="button" class="card-btn" id="codeRecharge"><p>Recarregar</p> <img src="../assets/icons/next_icon.svg"></button>
                                 </div>
                             </div>
 
@@ -99,7 +108,7 @@
                                     <p>Você vai embarcar em uma viagem incrivel? Use seu bilhete aqui!</p>
                                 </div>
                                 <div class="card-header-button">
-                                    <button type="button" class="card-btn" id="codeGenerate"><p>Usar já</p> <img src="../assets/icons/next_icon.svg"></button>
+                                    <button type="button" class="card-btn" id="useCode"><p>Usar já</p> <img src="../assets/icons/next_icon.svg"></button>
                                 </div>
                             </div>
                         </div>
@@ -131,10 +140,10 @@
                     <div class="footer-col">
                         <h4>Bilhetes</h4>
                         <ul>
-                            <li><a href="#">Como funcionam</a></li>
-                            <li><a href="../generate.html">Gerar novo bilhete</a></li>
-                            <li><a href="../recharge.html">Recarregar bilhete</a></li>
-                            <li><a href="../usage.html">Utilizar Bilhetes</a></li>
+                            <li><a href="tickets.html">Ações Rápidas</a></li>
+                            <li><a href="generate.html">Gerar novo bilhete</a></li>
+                            <li><a href="recharge.html">Recarregar bilhete</a></li>
+                            <li><a href="mainTicket.html">Utilizar Bilhetes</a></li>
                             <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>
@@ -151,5 +160,56 @@
             </div>
         </footer>
         <!-- Footer -->
+
+        <!-- Modal Termo de Uso -->
+        <section class="termUse-modal-container" id="termUseModal">
+            <div class="termUse-content">
+                <div class="termUse-header">
+                    <div class="termUse-header-title">
+                        <h1>Termo de aceite para criar código único</h1>
+                    </div>
+                    <div class="termUse-header-icon">
+                        <img src="../assets/icons/close_icon.svg">
+                    </div>
+                </div>
+                
+                <div class="termUse-main">
+                    <div class="termUse-main-text">
+                        <p>Ao aceitar este termo será gerado um código único, onde será possivel recarregar, usar e gerar um relatório de uso. Você pode recarrega-lo várias vezes, sendo armazenadas elas sequencialmente onde uma vez expirada a próxima será ativada automáticamente</p>
+                    </div>
+                    <div class="termUse-main-button">
+                        <button type="button" id="termUseButton" class="termUse-btn">Aceitar <img src="../assets/icons/arrow_right.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Termo de Uso -->
+
+        <!-- Modal Recarga - Seleção do Bilhete -->
+        <section class="recharge-modal-container" id="rechargeModal">
+            <div class="recharge-content">
+                <div class="recharge-header">
+                    <div class="recharge-header-title">
+                        <h1>Recarregar seu bilhete</h1>
+                        <p>Escolha o tipo do seu bilhete clicando no cartão</p>
+                    </div>
+                    <div class="recharge-header-icon">
+                        <img src="../assets/icons/close_icon.svg">
+                    </div>
+                </div>
+                
+                <div class="recharge-main">
+                    <div class="recharge-cards">
+                        <img src="../assets/cards/card_personalite.svg" alt="Cartão Pesonalitè">
+                        <img src="../assets/cards/card_creditos.svg" alt="Cartão Créditos">
+                    </div>
+
+                    <div class="recharge-btn">
+                        <button type="button" class="rechagerCancel-btn" id="CancelBtn">Cancelar <img src="../assets/icons/x_icon.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Recarga - Seleção do Bilhete -->
     </body>
 </html>

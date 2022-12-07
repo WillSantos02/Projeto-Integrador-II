@@ -2,7 +2,7 @@
 
 .flip-card {
   background-color: transparent;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 50px;
   width: 172px;
   height: 295px;
@@ -38,10 +38,15 @@
   transform: rotateY(180deg);
 }
 
-.flip-card-back, h1{
+.flip-card-back h1{
   padding-top: 50px;
 }
 
-.flip-card-back, p{
+.flip-card-back p{
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 200;
+  font-size: 12px;
+  text-align: justify;
 }

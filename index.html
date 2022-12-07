@@ -14,7 +14,7 @@
 
         <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
         
-        <title>TRANSCAR</title>
+        <title>FasTICKET - O sistema de bilhete mais único que você conhece!</title>
     </head>
     
     <body>
@@ -22,19 +22,20 @@
         <header>
             <nav>
                 <abbr title="Ir para Home">
-                    <img class="logo" id="navbar" src="assets/logo/TRANSCAR.svg" alt="Ir para Home" onclick="location.href='index.html'">
+                    <img class="logo" id="navbar" src="assets/logo/FASTICKET.svg" alt="Ir para Home" onclick="location.href='index.html'">
                 </abbr>
 
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="views/about_ous_view/aboutOus.html">Sobre</a></li>
+                    <li><a href="#">Relatórios</a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
                 <ul class="nav-list">
                     <li>
                         <div class="buttons">
-                            <button type="button" onclick="location.href='views/tickets.html'" class="btn-nav">
+                            <button type="button" onclick="location.href='views/mainTicket.html'" class="btn-nav">
                                 Meu bilhete
                             </button>
                         </div>
@@ -56,7 +57,7 @@
                         <div class="flip-card-back">
                             <h1>7 DIAS</h1>
                             <p>Cartão de uso semanal</p>
-                            <p>TESTE</p>
+                            <p>Com o cartão de uso semanal, o usúario poderá fazer uso de qualquer um dos transportes conveniados durante 7 dias </p>
                         </div>
                     </div>
                 </div>
@@ -91,47 +92,15 @@
             </section>
             <!-- Cards -->
 
-            <!-- Actions -->
-            <section class="quick-actions">
-                <h1>Ações rápidas para o Bilhete</h1>
+            <!-- About me -->
+            <section class="about-container">
+                <h1>Uma solução prática para seu dia-a-dia</h1>
 
-                <ul class="quick-actions-buttons">
-                    <li>
-                        <div>
-                            <button type="button" onclick="location.href='views/generate.html'" class="generic-btn" href="views/generate.html">
-                                Gerar
-                            </button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <button type="button" onclick="location.href='views/recharge.html'" class="generic-btn">
-                                Recarregar
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-
-                <ul class="quick-actions-buttons">
-                    <li>
-                        <div>
-                            <button type="button" onclick="location.href='#'" class="generic-btn">
-                                Utilizar
-                            </button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <button type="button" onclick="location.href='views/myticket.html'" class="generic-btn">
-                                Ver
-                            </button>
-                        </div>
-                    </li>
-                </ul>
+                <div class="about-text">
+                    <p>Nunca foi tão fácil usar o transporte público como agora, com os bilhetes da TRANSCAR você chega onde precisa.</p>
+                </div>
             </section>
-            <!-- Actions -->
+            <!-- About me -->
 
             <!-- Tickets Types -->
             <section class="ticket-type">
@@ -142,11 +111,7 @@
                         <div class="text-infos">
                             <h1>Créditos</h1>
 
-                            <p>Ao utilizar o bilhete créditos terá passe livre para usar todos os transportes públicos disponíveis durante 40 minutos, após que o tempo tenha passado um novo crédito será debitado. As opções disponíveis  único, o duplo e personalizado.</p>
-                
-                            <div>
-                                <button type="button" onclick="location.href='views/generate.html'" class="generic-btn">Gerar Bilhete</button>
-                            </div>
+                            <p>Vai usar rápidinho e não precisa de muito? Vai com o Créditos. Com ele você escolhe uma ou duas utilizações, e durante 40 minutos você usa a vontade.</p>
                         </div>
                     </li>
                     
@@ -154,26 +119,22 @@
                         <div class="text-infos">
                             <h1>Personalitè</h1>
 
-                            <p>De acordo com a sua escolha de um tempo pré-definido, sendo eles: 7, 14 e 30 dias, ao utilizar terá passe livre durante o tempo escolhido.</p>
-
-                            <div>
-                                <button type="button" onclick="location.href='views/generate.html'" class="generic-btn">Gerar Bilhete</button>
-                            </div>
+                            <p>Está passeando ou usa sempre? Vai com o Personalitè. Você escolhe quantos dias quer e usa a vontade nesse tempo.</p>
                         </div>
                     </li>
                 </ul>
             </section>
             <!-- Tickets Types -->
 
-            <!-- About me -->
-            <section class="about-container">
-                <h1>Quem somos nós ?</h1>
+            <!-- Publi -->
+            <section class="publi-container">
+                <h1>Vai, não perde essa oportunidade!</h1>
 
-                <div class="about-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac dictum libero, nec aliquam lacus. Fusce euismod, elit sagittis mollis egestas, magna neque consequat lectus, eu posuere nulla felis in sapien. Sed at congue ipsum. In hac habitasse platea dictumst. Morbi ut urna vitae dolor pulvinar interdum quis sed nisi. Donec dictum leo et efficitur ornare. Nam convallis laoreet risus, consectetur rhoncus quam suscipit in. Ut id augue feugiat, laoreet odio eu, scelerisque ante. In scelerisque leo vel accumsan vestibulum. Fusce sit amet finibus erat. Aliquam risus ipsum, congue vitae purus eget, vehicula tincidunt ex.</p>
+                <div class="publi-text">
+                    <button type="button" class="btn-nav" onclick="location.href='views/generate.html'">Gerar Bilhete</button>
                 </div>
             </section>
-            <!-- About me -->
+            <!-- Publi -->
         </main>
 
         <!-- Footer -->
@@ -199,10 +160,10 @@
                     <div class="footer-col">
                         <h4>Bilhetes</h4>
                         <ul>
-                            <li><a href="#">Como funcionam</a></li>
+                            <li><a href="views/tickets.html">Ações Rápidas</a></li>
                             <li><a href="views/generate.html">Gerar novo bilhete</a></li>
                             <li><a href="views/recharge.html">Recarregar bilhete</a></li>
-                            <li><a href="views/usage.html">Utilizar Bilhetes</a></li>
+                            <li><a href="views/mainTicket.html">Utilizar Bilhetes</a></li>
                             <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>

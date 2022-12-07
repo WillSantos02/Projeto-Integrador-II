@@ -1,8 +1,8 @@
 @import url('configs.css');
 
-.logo {
+/* .logo {
     margin-right: 140px;
-}
+} */
 
 .logo:hover {
     cursor: pointer;
@@ -10,7 +10,7 @@
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background: var(--bg-nav-dark);
     height: 9.28vh;
@@ -38,11 +38,12 @@ nav {
 
     width: 153px;
     height: 44px;
-    margin-left: 140px;
+    /* margin-left: 140px; */
 
     background-color: var(--purple);
     color: var(--white);
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     border: none;
     border-radius: 30px;
 
@@ -51,7 +52,6 @@ nav {
 }
 .btn-nav:hover {
     opacity: 0.7;
-    font-size: 15px;
 }
 
 .disable {
