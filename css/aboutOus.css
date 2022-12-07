@@ -63,13 +63,16 @@
 
 .about-ous-content-link{
     margin-top: 25px;
+}
+.about-ous-content-link a{
     font-size: 20px;
     font-weight: 400;
     color: var(--purple);
     cursor: pointer;
     transition: .2s;
+    text-decoration: none;
 }
-.about-ous-content-link:hover{
+.about-ous-content-link a:hover{
     opacity: 0.7;
     text-decoration: underline;
 }

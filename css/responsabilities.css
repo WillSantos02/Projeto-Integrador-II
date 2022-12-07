@@ -89,16 +89,19 @@
     width: 314px;
     height: 24px;
 
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--purple);
-
     margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
+    text-decoration: none;
 
     cursor: pointer;
 }
-.responsabilities-box-link:hover {
+.responsabilities-box-link a {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--purple);
+    text-decoration: none;
+}
+.responsabilities-box-link a:hover {
     text-decoration: underline;
 }
