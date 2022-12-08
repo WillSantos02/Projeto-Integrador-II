@@ -1,9 +1,3 @@
-@import url('configs.css');
-
-/* .logo {
-    margin-right: 140px;
-} */
-
 .logo:hover {
     cursor: pointer;
 }

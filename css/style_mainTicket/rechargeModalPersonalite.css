@@ -1,0 +1,94 @@
+.personalite-modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.personalite-content {
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 467px;
+    height: 690px;
+    border-radius: 20px;
+}
+
+.personalite-header {
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    width: 467px;
+    height: 119px;
+    border-radius: 20px 20px 0 0;
+}
+
+.personalite-header-title {
+    width: 336px;
+    height: 34px;
+    margin-top: 36px;
+    margin-left: 32px;
+}
+
+.personalite-header-title h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.personalite-header-icon {
+    margin-top: 25px;
+    margin-left: 38px;
+}
+
+.personalite-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.personalite-main-text {
+    width: 373px;
+    height: 81px;
+    margin-bottom: 20px;
+}
+.personalite-main-text p {
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.personalite-main-cards-options {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 95px;
+}
+
+.personalite-main-types {
+    display: flex;
+    flex-direction: column;
+    width: 309px;
+    height: 190px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.personalite-type-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.personalite-fun-btn-box {
+    display: flex;
+    margin-bottom: 50px;
+}

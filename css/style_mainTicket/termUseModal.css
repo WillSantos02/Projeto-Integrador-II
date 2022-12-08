@@ -1,0 +1,113 @@
+.termUse-modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    animation: modal .2s;
+}
+
+.termUse-content {
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 467px;
+    height: 665px;
+    border-radius: 20px;
+}
+
+.termUse-header {
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    width: 467px;
+    height: 208px;
+    border-radius: 20px 20px 0 0;
+}
+
+.termUse-header-title {
+    width: 306px;
+    height: 68px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.termUse-header-title h1 {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.termUse-header-icon img {
+    margin-top: 25px;
+    margin-left: 49.6px;
+    cursor: pointer;
+    transition: .3s;
+}
+.termUse-header-icon img:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, .30);
+    border-radius: 50px;
+}
+
+.termUse-main {
+    width: 367px;
+    height: 356px;
+    margin: 50px 50px 50px 50px;
+}
+
+.termUse-main-text {
+    width: 367px;
+    height: 243px;
+}
+
+.termUse-main-text p {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.termUse-main-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 39px;
+}
+.termUse-btn {
+    width: 367px;
+    height: 74px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+
+    transition: .3s;
+}
+.termUse-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

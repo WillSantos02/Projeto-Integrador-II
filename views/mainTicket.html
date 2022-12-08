@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/mainTicket.css">
+        <link rel="stylesheet" href="../css/style_mainTicket/mainTicket.css">
+        <link rel="stylesheet" href="../css/style_mainTicket/rechargeModal.css">
+        <link rel="stylesheet" href="../css/style_mainTicket/rechargeModalCredit.css">
+        <link rel="stylesheet" href="../css/style_mainTicket/rechargeModalPersonalite.css">
+        <link rel="stylesheet" href="../css/style_mainTicket/termUseModal.css">
 
         <link rel="stylesheet" href="../css/style_configs/configs.css">
         <link rel="stylesheet" href="../css/style_configs/navbar.css">
@@ -169,7 +173,7 @@
                         <h1>Termo de aceite para criar código único</h1>
                     </div>
                     <div class="termUse-header-icon">
-                        <img src="../assets/icons/close_icon.svg">
+                        <img id="closeModal" src="../assets/icons/close_icon.svg">
                     </div>
                 </div>
                 
@@ -183,7 +187,7 @@
                 </div>
             </div>
         </section>
-        <!-- Modal Termo de Uso -->
+        <!-- Modal Termo de Uso --> 
 
         <!-- Modal Recarga - Seleção do Bilhete -->
         <section class="recharge-modal-container" id="rechargeModal">
@@ -194,7 +198,7 @@
                         <p>Escolha o tipo do seu bilhete clicando no cartão</p>
                     </div>
                     <div class="recharge-header-icon">
-                        <img src="../assets/icons/close_icon.svg">
+                        <img id="closeModal" src="../assets/icons/close_icon.svg">
                     </div>
                 </div>
                 
@@ -211,5 +215,126 @@
             </div>
         </section>
         <!-- Modal Recarga - Seleção do Bilhete -->
+
+        <!-- Modal Recarga - Créditos | Personalite -->
+        <section class="credit-modal-container" id="creditModal">
+            <div class="credit-content">
+                <div class="credit-header">
+                    <div class="credit-header-title">
+                        <h1>Recarregar seu bilhete</h1>
+                    </div>
+                    <div class="credit-header-icon">
+                        <img id="closeModal" src="../assets/icons/close_icon.svg">
+                    </div>
+                </div>
+                
+                <div class="credit-main">
+                    <div class="main-text">
+                        <p>Utilização ilimitada durante 40 minutos, você pode ter uma ativação ou duas.</p>
+                    </div>
+
+                    <div class="main-cards-options">
+                        <button type="button" class="option-btn selected" id="CreditOptionBtn">Créditos</button>
+                        <button type="button" class="option-btn" id="PersonaliteOptionBtn">Personalitè</button>
+                    </div>
+
+                    <div class="main-types">
+                        <div class="type-buttons">
+                            <button type="button" class="type-btn" id="Unico">único</button>
+                            <button type="button" class="type-btn" id="Duplo">duplo</button>
+                        </div>
+
+                        <input type="text" name="valor" class="value-display" id="creditVelue" readonly placeholder="R$ 30,26">
+                    </div>
+
+                    <div class="fun-btn-box">
+                        <button type="button" class="fun-btn" id="CancelBtn">Cancelar <img src="../assets/icons/x_icon.svg"></button>
+                        <button type="button" class="fun-btn" id="RechargeBtn">Recarregar <img src="../assets/icons/arrow_right.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="personalite-modal-container" id="personaliteModal">
+            <div class="personalite-content">
+                <div class="personalite-header">
+                    <div class="personalite-header-title">
+                        <h1>Recarregar seu bilhete</h1>
+                    </div>
+                    <div class="personalite-header-icon">
+                        <img id="closeModal" src="../assets/icons/close_icon.svg">
+                    </div>
+                </div>
+                
+                <div class="personalite-main">
+                    <div class="personalite-main-text">
+                        <p>Utilização ilimitada durante 40 minutos, você pode ter uma ativação ou duas.</p>
+                    </div>
+
+                    <div class="personalite-main-cards-options">
+                        <button type="button" class="option-btn" id="CreditOptionBtn">Créditos</button>
+                        <button type="button" class="option-btn selected" id="PersonaliteOptionBtn">Personalitè</button>
+                    </div>
+
+                    <div class="personalite-main-types">
+                        <div class="personalite-type-buttons">
+                            <button type="button" class="type-btn" id="1">1 dia</button>
+                            <button type="button" class="type-btn" id="2">7 dias</button>
+                        </div>
+                        <div class="personalite-type-buttons">
+                            <button type="button" class="type-btn" id="14">14 dias</button>
+                            <button type="button" class="type-btn" id="30">30 dias</button>
+                        </div>
+
+                        <input type="text" name="valor" class="value-display" id="creditVelue" readonly placeholder="R$ 30,26">
+                    </div>
+
+                    <div class="personalite-fun-btn-box">
+                        <button type="button" class="fun-btn" id="CancelBtn">Cancelar <img src="../assets/icons/x_icon.svg"></button>
+                        <button type="button" class="fun-btn" id="RechargeBtn">Recarregar <img src="../assets/icons/arrow_right.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Recarga - Créditos | Personalite -->
     </body>
+
+    <script>
+        const geracaoCodigoModal = document.getElementById('termUseModal');
+        const selecTypeRechargeModal = document.getElementById('rechargeModal');
+        const creditModal = document.getElementById('creditModal');
+        const personaliteModal = document.getElementById('personaliteModal');
+
+        function abrirModalTermoGeracao(){
+            geracaoCodigoModal.style.display = "flex";
+            
+            geracaoCodigoModal.addEventListener('click', (e) => {
+
+                if(e.target.id == 'termUseModal' || 
+                    e.target.id == 'codeGenerate' || 
+                    e.target.id == "closeModal"){
+                    geracaoCodigoModal.style.display = "none";
+                }
+            });
+        }
+
+        function abrirModalRecarga(){
+            selecTypeRechargeModal.style.display = "flex";
+
+            selecTypeRechargeModal.addEventListener('click', (e) => {
+                if(e.target.id == 'rechargeModal' || 
+                    e.target.id == 'codeRecharge' || 
+                    e.target.id == 'closeModal' || 
+                    e.target.id == 'CancelBtn'){
+                    selecTypeRechargeModal.style.display = "none";
+                } 
+            });
+        }
+
+        const openGeracao = document.querySelector('#codeGenerate');
+        openGeracao.addEventListener('click', () => abrirModalTermoGeracao('termUseModal'));
+
+        const openRecharge = document.querySelector('#codeRecharge');
+        openRecharge.addEventListener('click', () => abrirModalRecarga('rechargeModal'));
+    </script>
 </html>

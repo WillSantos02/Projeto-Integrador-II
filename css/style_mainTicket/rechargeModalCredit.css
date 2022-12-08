@@ -1,0 +1,176 @@
+.credit-modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-content {
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 467px;
+    height: 630px;
+    border-radius: 20px;
+}
+
+.credit-header {
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    width: 467px;
+    height: 119px;
+    border-radius: 20px 20px 0 0;
+}
+
+.credit-header-title {
+    width: 336px;
+    height: 34px;
+    margin-top: 36px;
+    margin-left: 32px;
+}
+
+.credit-header-title h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.credit-header-icon {
+    margin-top: 25px;
+    margin-left: 38px;
+}
+
+.credit-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.main-text {
+    width: 373px;
+    height: 81px;
+    margin-bottom: 20px;
+}
+.main-text p {
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.main-cards-options {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 95px;
+}
+.option-btn {
+    height: 30px;
+    margin-top: 10px;
+
+    color: var(--white);
+    font-size: 23px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    border: 3px solid white;
+    border-radius: 7px;
+    background-image: url(../assets/btn_bg.png);
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: .3s;
+}
+.option-btn:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, .30);
+}
+.selected {
+    height: 55px;
+}
+
+.main-types {
+    display: flex;
+    flex-direction: column;
+    width: 309px;
+    height: 120px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.type-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.type-btn, .value-display {
+    width: 145px;
+    height: 50px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid white;
+    border-radius: 7px;
+    background-color: transparent;
+    transition: .3s;
+}
+.type-btn:hover {
+    background-color: var(--purple);
+    border: none;
+}
+.value-display{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.value-display::placeholder {
+    text-align: center;
+    color: var(--white);
+}
+
+.fun-btn-box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.fun-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 50px;
+    margin-left: 8px;
+    margin-right: 8px;
+    
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: .3s;
+}
+.fun-btn img {
+    width: 32px;
+    height: 32px;
+}
+.fun-btn:hover {
+    cursor: pointer;
+    font-size: 17px;
+}
+#CancelBtn:hover {
+    background-color: #8E2828;
+}
+#RechargeBtn {
+    border: none;
+    background-color: var(--purple);
+}
