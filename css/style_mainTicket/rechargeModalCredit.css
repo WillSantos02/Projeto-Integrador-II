@@ -132,6 +132,12 @@
     background-color: var(--purple);
     border: none;
 }
+
+.btn-selected {
+    background-color: var(--purple);
+    border: none;
+}
+
 .value-display{
     margin-top: 20px;
     margin-left: auto;
@@ -177,7 +183,7 @@
 #CancelBtn:hover {
     background-color: #8E2828;
 }
-#RechargeBtn {
+#btnRecargaPersonalite, #btnRecargaCreditos {
     border: none;
     background-color: var(--purple);
 }

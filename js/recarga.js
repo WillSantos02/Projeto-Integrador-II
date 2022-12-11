@@ -1,4 +1,4 @@
-const btnPersonalite = document.getElementById('btnRecargaPersonalite')
+const btnPersonalite = document.getElementById('    ')
 const btnCreditos = document.getElementById('btnRecargaCreditos')
 
 const modalMensagemSuccess = document.getElementById('modalMensagemSuccess')

@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="../css/style_configs/navbar.css">
         <link rel="stylesheet" href="../css/style_configs/footer.css">
         <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
+
+        <link rel="stylesheet" href="../css/style_recharge/messageModal.css">
         
         <title>FasTICKET: Bem vindo! Aqui você cria, recarrega, utilza, faz o que quiser com seu bilhete.</title>
     </head>
@@ -242,16 +244,16 @@
 
                     <div class="main-types">
                         <div class="type-buttons">
-                            <button type="button" class="type-btn" id="Unico">único</button>
-                            <button type="button" class="type-btn" id="Duplo">duplo</button>
+                            <button type="button" class="type-btn" id="Unico" data-value="3.26">único</button>
+                            <button type="button" class="type-btn" id="Duplo" data-value="6.52">duplo</button>
                         </div>
 
-                        <input type="text" name="valor" class="value-display" id="creditVelue" readonly placeholder="R$ 30,26">
+                        <input type="text" name="valor" class="value-display" id="valorRecarga" readonly placeholder="R$ --">
                     </div>
 
                     <div class="fun-btn-box">
                         <button type="button" class="fun-btn" id="CancelBtn">Cancelar <img src="../assets/icons/x_icon.svg"></button>
-                        <button type="button" class="fun-btn" id="RechargeBtn">Recarregar <img src="../assets/icons/arrow_right.svg"></button>
+                        <button type="button" class="fun-btn" id="btnRecargaCreditos">Recarregar <img id="btnIcon" src="../assets/icons/arrow_right.svg"></button>
                     </div>
                 </div>
             </div>
@@ -280,25 +282,59 @@
 
                     <div class="personalite-main-types">
                         <div class="personalite-type-buttons">
-                            <button type="button" class="type-btn" id="1">1 dia</button>
-                            <button type="button" class="type-btn" id="2">7 dias</button>
+                            <button type="button" class="type-btn" id="1d" data-value="10.27">1 dia</button>
+                            <button type="button" class="type-btn" id="7d" data-value="71.89">7 dias</button>
                         </div>
                         <div class="personalite-type-buttons">
-                            <button type="button" class="type-btn" id="14">14 dias</button>
-                            <button type="button" class="type-btn" id="30">30 dias</button>
+                            <button type="button" class="type-btn" id="14d" data-value="143.78">14 dias</button>
+                            <button type="button" class="type-btn" id="30d" data-value="308.1">30 dias</button>
                         </div>
 
-                        <input type="text" name="valor" class="value-display" id="creditVelue" readonly placeholder="R$ 30,26">
+                        <input type="text" name="valor" class="value-display" id="valorRecarga" readonly placeholder="R$ --">
                     </div>
 
                     <div class="personalite-fun-btn-box">
                         <button type="button" class="fun-btn" id="CancelBtn">Cancelar <img src="../assets/icons/x_icon.svg"></button>
-                        <button type="button" class="fun-btn" id="RechargeBtn">Recarregar <img src="../assets/icons/arrow_right.svg"></button>
+                        <button type="button" class="fun-btn" id="btnRecargaPersonalite" id="btnIcon">Recarregar <img src="../assets/icons/arrow_right.svg"></button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Modal Recarga - Créditos | Personalite -->
+
+        <!-- Modal de sucesso -->
+        <div id="modalMensagemSuccess" style="display: none;">    
+            <div class="message-modal-container">
+                <div class="message-bar-modal">
+                    <h1 class="message-modal-title">Aviso de recargar !</h1>
+                </div>
+                
+                <div class="modal-message">
+                    <span>Bilhete recarregado com Sucesso !</span>
+                </div>
+                
+                <div class="message-bottom-modal sucess">
+                </div>
+            </div>
+        </div>
+        <!-- Modal de sucesso -->
+
+        <!-- Modal de erro -->
+        <div id="modalMensagemError" style="display: none;">    
+            <div class="message-modal-container">
+                <div class="message-bar-modal">
+                    <h1 class="message-modal-title">Aviso de recargar !</h1>
+                </div>
+                
+                <div class="modal-message">
+                    <span>Código invalido ou inexistente</span>
+                </div>
+                
+                <div class="message-bottom-modal error">
+                </div>
+            </div>
+        </div>
+        <!-- Modal de erro -->
     </body>
 
     <!-- Geração do código -->
@@ -374,6 +410,16 @@
                     creditModal.style.display = "none";
                 }
             });
+
+            buttonsCreditos.forEach(buttonF => {
+                if (buttonF.classList.contains('btn-selected')){
+                    buttonF.classList.remove('btn-selected')
+                }
+            })
+
+            valorRecarga.forEach(input => {
+                input.placeholder = "R$10.00"
+            })
         }
 
         function abrirModalPersonalite(){
@@ -388,6 +434,15 @@
                 }
             })
             
+            buttonsCreditos.forEach(buttonF => {
+                if (buttonF.classList.contains('btn-selected')){
+                    buttonF.classList.remove('btn-selected')
+                }
+            })
+
+            valorRecarga.forEach(input => {
+                input.placeholder = "R$10.00"
+            })
         }
 
         const openGeracao = document.querySelector('#codeGenerate');
@@ -401,5 +456,103 @@
 
         const openPersonalite = document.querySelector('#cardPersonalite');
         openPersonalite.addEventListener('click', () => abrirModalPersonalite('personaliteModal'));
+
+        //- - - - - - - //
+        const buttonsCreditos = document.querySelectorAll('.type-btn')
+        const valorRecarga = document.querySelectorAll('#valorRecarga')
+
+        buttonsCreditos.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.add('btn-selected')
+
+                buttonsCreditos.forEach(buttonF => {
+                    if (buttonF != button){
+                        if (buttonF.classList.contains('btn-selected')){
+                            buttonF.classList.remove('btn-selected')
+                        }
+                    }
+                })
+
+                valorRecarga.forEach(input => {
+                    input.placeholder = `R$ ${button.dataset.value}`
+                })
+            })
+        })
+
+        //- - - - -//
+        const btnPersonalite = document.getElementById('btnRecargaPersonalite')
+        const btnCreditos = document.getElementById('btnRecargaCreditos')
+
+        const modalMensagemSuccess = document.getElementById('modalMensagemSuccess')
+        const modalMensagemError = document.getElementById('modalMensagemError')
+
+        const ticketCodeInput = document.getElementById('ticketCode')
+
+        btnPersonalite.addEventListener('click', async () => {
+            if (ticketCodeInput.value != '')
+            {//tem algo digitado
+                const btnSelect = document.querySelectorAll('.btn-selected')
+
+                if (btnSelect.length != 0)
+                {
+                    const response = await fetch('http://localhost:8080/recharges', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            ticket: ticketCodeInput.value,
+                            type: btnSelect[0].id
+                        }
+                    }).then(res => res.json()).then(res=>res)
+
+                    exibeModal(response.status);
+                }
+            }
+        })
+
+        btnCreditos.addEventListener('click', async () => {
+            if (ticketCodeInput.value != '')
+            {//tem algo digitado
+                const btnSelect = document.querySelectorAll('.btn-selected')
+
+                if (btnSelect.length != 0)
+                {
+                    const response = await fetch('http://localhost:8080/recharges', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            ticket: ticketCodeInput.value,
+                            type: btnSelect[0].id
+                        }
+                    }).then(res => res.json()).then(res=>res)
+                    
+                    exibeModal(response.status);
+                }
+            }
+        })
+
+        function exibeModal (status) {
+            //alert(response.message);
+            if(status == 'success'){
+                modalMensagemSuccess.style.display = 'flex';
+                personaliteModal.style.display = "none";
+                creditModal.style.display = "none";
+                //console.log('entrou no if');
+                
+                setTimeout(() => {
+                    modalMensagemSuccess.style.display = 'none';
+                    //consollog('entrou no setTimeout');
+                }, 5000);
+            } else {
+                modalMensagemError.style.display = 'flex';
+                personaliteModal.style.display = "none";
+                creditModal.style.display = "none";
+                //nsole.log('entrou no else');
+
+                setTimeout(() => {
+                    modalMensagemError.style.display = 'none';
+                    // consollog('entrou no setTimeout');
+                }, 5000);
+            }
+        }
     </script>
 </html>
