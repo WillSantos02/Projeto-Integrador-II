@@ -1,0 +1,182 @@
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 31px;
+}
+
+.code-generate {
+    display: grid;
+}
+.qr-code {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-code {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    text-align: center;
+
+    width: 307px;
+    margin-top: 30px;
+    padding: 10px 10px 10px 10px;
+
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    
+    color: var(--white);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.generate-btn, .recharge-btn {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.recharge-btn {
+    margin-left: 20px;
+}
+
+/** Termo de uso modal **/
+.term-modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.term-modal{
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 600px;
+    height: 300px;
+    box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
+}
+.nav-term-modal {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.term-modal-title {
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+.term-modal-text {
+    height: 220px;
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    margin: 20px 50px 20px 50px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.term-modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+}
+.term-modal-btn {
+    margin: 0 20px 0.5% 20px;
+    border-radius: 10px;
+}
+#cancel:hover {
+    background-color: #8E2828;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.show .term-modal{
+    animation: modal .2s;
+}
+
+.term-modal-container.show{
+    display: flex;
+}
+/** Termo de uso modal **/
+
+/** Tooltip **/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 90px;
+    background-color: var(--white);
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 90%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--white) transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon-copy {
+    background: transparent;
+    border: none;
+    margin-left: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.icon-copy img:hover{
+    opacity: 0.7;
+}
