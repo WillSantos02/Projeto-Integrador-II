@@ -183,7 +183,7 @@
 #CancelBtn:hover {
     background-color: #8E2828;
 }
-#btnRecargaPersonalite, #btnRecargaCreditos {
+#btnRecargaPersonalite, #btnRecargaCreditos, #btnticketUse {
     border: none;
     background-color: var(--purple);
 }
