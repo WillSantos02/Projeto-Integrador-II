@@ -60,15 +60,15 @@
     font-size: 22px;
     font-weight: 300;
     text-align: start;
-    display: none;
+    display: flex;
 }
-#code-message .sucess {
+#code-message .sucessMsg {
     color: #06C281;
 }
-#code-message .warning {
+#code-message .warningMsg {
     color: #F5A623; 
 }
-#code-message .error {
+#code-message .errorMsg {
     color: #EF4444;
 }
 

@@ -4,8 +4,10 @@ const btnCreditos = document.getElementById('btnRecargaCreditos')
 const modalMensagemSuccess = document.getElementById('modalMensagemSuccess')
 const modalMensagemError = document.getElementById('modalMensagemError')
 
+const ticketCodeInput = document.getElementById('ticketCode')
+
 btnPersonalite.addEventListener('click', async () => {
-    if (inputPersonalite.value != '')
+if (ticketCodeInput.value != '')
     {//tem algo digitado
         const btnSelect = document.querySelectorAll('.btn-selected')
 
@@ -15,7 +17,7 @@ btnPersonalite.addEventListener('click', async () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    ticket: inputPersonalite.value,
+                    ticket: ticketCodeInput.value,
                     type: btnSelect[0].id
                 }
             }).then(res => res.json()).then(res=>res)
@@ -26,7 +28,7 @@ btnPersonalite.addEventListener('click', async () => {
 })
 
 btnCreditos.addEventListener('click', async () => {
-    if (inputCreditos.value != '')
+    if (ticketCodeInput.value != '')
     {//tem algo digitado
         const btnSelect = document.querySelectorAll('.btn-selected')
 
@@ -36,11 +38,11 @@ btnCreditos.addEventListener('click', async () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    ticket: inputCreditos.value,
+                    ticket: ticketCodeInput.value,
                     type: btnSelect[0].id
                 }
             }).then(res => res.json()).then(res=>res)
-            
+                
             exibeModal(response.status);
         }
     }
@@ -50,14 +52,18 @@ function exibeModal (status) {
     //alert(response.message);
     if(status == 'success'){
         modalMensagemSuccess.style.display = 'flex';
+        personaliteModal.style.display = "none";
+        creditModal.style.display = "none";
         //console.log('entrou no if');
-        
+            
         setTimeout(() => {
             modalMensagemSuccess.style.display = 'none';
             //consollog('entrou no setTimeout');
         }, 5000);
     } else {
         modalMensagemError.style.display = 'flex';
+        personaliteModal.style.display = "none";
+        creditModal.style.display = "none";
         //nsole.log('entrou no else');
 
         setTimeout(() => {

@@ -1,0 +1,279 @@
+.card {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 31px;
+}
+
+.action-btn.btn-selected{
+    background-color: var(--purple);
+}
+
+.selecionado {
+    margin-top: 20px;
+    margin-left: -110px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+
+    position: relative;
+    transition: 100ms;
+}
+
+.selecionado_creditos {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: -120px;
+    margin-bottom: 50px;
+    
+    position: relative;
+    transition: 100ms;
+}
+
+.info-container{
+    display: grid;
+    margin-top: -40px;
+    padding-bottom: 50px;
+}
+
+.info-list{
+    list-style: none;
+    display: flex;
+}
+
+.informations{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.informations h1{
+    color: var(--purple);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.informations p {
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+/** Cards Modal **/
+p.ticket-code {
+    border: none;
+    font-size: 14;
+    font-weight: 100;
+    color: var(--white);
+    text-align: center;
+}
+input {
+    width: 307px;
+    height: 30px;
+    margin-top: 10px; 
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.valor{
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    color: var(--white);
+    font-weight: 200;
+}
+:is(label) input {
+    width: 90px;
+    height: 31px;
+}
+
+.reacharge-container{
+    display: grid;
+}
+
+.buttons-container{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-group{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-group ul{
+    list-style: none;
+}
+
+.buttons-group ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.recharge-options{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 148px;
+    height: 33px;
+
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 400;
+    border: 1px solid var(--white);
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+.recharge-options:hover{
+    background-color: var(--purple);
+    opacity: 0.7;
+}
+.recharge-options.center{
+    margin: 0px auto 15px auto;
+}
+#btnRecargaPersonalite, #btnRecargaCreditos{
+    margin: 15px auto 15px auto;
+}
+
+.recharge-personalite-container,.recharge-credits-container{
+    top: 0px;
+    left: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    width: 307px;
+    height: 300px;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(100px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal-content{
+    animation: modal .3s;
+}
+
+.recharge-personalite-container.mostrar{
+    display: flex;
+    margin-top: -30px;
+}
+.recharge-credits-container.mostrar{
+    display: flex;
+    margin-top: -30px;
+}
+/** Cards Modal **/
+
+/** Messages Modal **/
+#modalMensagemSuccess, #modalMensagemError {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: message-modal .3s;
+}
+
+.message-modal-container{
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 600px;
+    height: 180px;
+    box-shadow: 0 4px 55px 10px rgba(0, 0, 0, .3);
+}
+.message-bar-modal {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-message {
+    height: 100px;
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-message span{
+    font-size: 25px;
+    text-align: center;
+    color: var(--white);
+}
+
+.message-bottom-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+}
+.sucess {
+    background-color: #2A8E28;
+}
+
+.error {
+    background-color: #8E2828;
+
+}
+
+.message-modal-title {
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+@keyframes message-modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+/** Messages Modal **/

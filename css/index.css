@@ -98,3 +98,56 @@ h1 {
     font-weight: 300;
 }
 /** Publi **/
+
+/** Flip cards **/
+.flip-card {
+    background-color: transparent;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 172px;
+    height: 295px;
+    border-radius: 24px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+.flip-card-back {
+    background-image: url('../../assets/cards/flip-card-bg.svg');
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+  
+.flip-card-back h1{
+    padding-top: 50px;
+}
+  
+.flip-card-back p{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 200;
+    font-size: 12px;
+    text-align: justify;
+}
+/** Flip cards **/

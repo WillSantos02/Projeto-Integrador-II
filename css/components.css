@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+@media (prefers-reduced-motion: no-preference){
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    :target{
+        scroll-margin-top: 15px;  
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+:root {
+    --bg-nav-dark: #1e1e1e;
+    --bg-main-dark: #222222;
+    --bg-footer-dark: #262626;
+    --purple: #635cce;
+    --white: #ffffff;
+}
+
+main {
+    background: var(--bg-main-dark);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.generic-btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 120px;
+    height: 30px;
+
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 400;
+    border: 1px solid var(--white);
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+.generic-btn:hover{
+    background-color: var(--purple);
+    opacity: 0.7;
+}
+
+/** Navbat **/
+.logo:hover {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg-nav-dark);
+    height: 9.28vh;
+}
+.nav-list {
+    font-weight: 200;
+    list-style: none;
+    display: flex;
+}
+.nav-list li {
+    margin-left: 40px;
+}
+.nav-list li a{
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}.nav-list li a:hover{
+    opacity: 0.7;
+}
+.btn-nav {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 153px;
+    height: 44px;
+    /* margin-left: 140px; */
+
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-nav:hover {
+    opacity: 0.7;
+}
+
+.disable {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.5;
+}
+/** Navbat **/
+
+/** Footer **/
+footer{
+    background-color: var(--bg-nav-dark);
+    padding-bottom: 20px;
+}
+.nav-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg-footer-dark);
+    height: 50px
+}
+.nav-list-footer li {
+    font-size: 16px;
+    font-weight: 200;
+    list-style: none;
+}
+.nav-list-footer li>a{
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-list-footer li>a:hover{
+    opacity: 0.7;
+}
+
+.container-footer{
+    width: 100%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-col{
+    width: 200px;
+    margin-left: 20px;
+}
+.footer-col h4{
+    font-size: 16px;
+    color: var(--white);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 100;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    opacity: 0.7;
+    padding-left: 10px;
+}
+/** Footer **/
+
+/** Scrollbar **/
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+/** Scrollbar **/
