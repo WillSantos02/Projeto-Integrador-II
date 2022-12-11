@@ -1,0 +1,101 @@
+.ticketUse-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticketUse-content {
+    position: relative;
+    background: var(--bg-main-dark);
+    width: 467px;
+    height: 473px;
+    border-radius: 20px;
+}
+
+.ticketUse-header {
+    background-color: var(--bg-nav-dark);
+    display: flex;
+    width: 467px;
+    height: 119px;
+    border-radius: 20px 20px 0 0;
+}
+
+.ticketUse-header-title {
+    width: 336px;
+    height: 34px;
+    margin-top: 36px;
+    margin-left: 32px;
+}
+
+.ticketUse-header-title h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.ticketUse-header-icon img{
+    margin-top: 25px;
+    margin-left: 38px;
+    cursor: pointer;
+    transition: .3s;
+}
+.ticketUse-header-icon img:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, .30);
+    border-radius: 50px;
+}
+
+.ticketUse-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.ticketUse-main-text {
+    width: 373px;
+    height: 81px;
+    margin-bottom: 20px;
+}
+.ticketUse-main-text p {
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.ticketUse-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 310px;
+    height: 95px;
+}
+
+.option-dropDown {
+    margin-bottom: 10px;
+    width: 293px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: 3px solid white;
+    border-radius: 7px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.ticketUse-fun-btn-box {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
