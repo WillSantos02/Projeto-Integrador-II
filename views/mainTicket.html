@@ -355,8 +355,24 @@
                     </div>
 
                     <div class="ticketUse-options">
-                        <button class="option-dropDown" id="">Meio de Transporte <img src="../assets/icons/dropdown_menu_icon.svg"></button>
-                        <button class="option-dropDown" id="">Local <img src="../assets/icons/dropdown_menu_icon.svg"></button>
+
+                        <div class="dropdown">
+                            <button onclick="openDropDownMeio()" class="option-dropDown">Meio de Transporte <img src="../assets/icons/dropdown_menu_icon.svg"></button>
+                            <div id="dropdownMeio" class="dropdown-content">
+                                <a href="#home">Trem</a>
+                                <a href="#about">Ônibus</a>
+                                <a href="#contact">Metro</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button onclick="openDropDownTransporte()" class="option-dropDown">Local <img src="../assets/icons/dropdown_menu_icon.svg"></button>
+                            <div id="dropdownTransporte" class="dropdown-content">
+                                <a href="#home">Campinas</a>
+                                <a href="#about">Sumaré</a>
+                                <a href="#contact">Valinhos</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="ticketUse-fun-btn-box">
@@ -371,6 +387,17 @@
 
     <!-- Geração do código -->
     <script src="../js/createTicket.js"></script>
+
+    <script>
+        function openDropDownMeio() {
+            document.getElementById("dropdownMeio").classList.toggle("show");
+        }
+        
+        function openDropDownTransporte() {
+            document.getElementById("dropdownTransporte").classList.toggle("show");
+        }
+    </script>
+
     <script>
         const createTicketBtn = document.getElementById('termUseButton');
         const ticketCode = document.getElementById('ticketCode');
