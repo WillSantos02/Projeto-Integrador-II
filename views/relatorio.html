@@ -4,16 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/fastActions.css">
+        <link rel="stylesheet" href="../css/relatorio.css">
 
         <link rel="stylesheet" href="../css/style_configs/configs.css">
         <link rel="stylesheet" href="../css/style_configs/navbar.css">
         <link rel="stylesheet" href="../css/style_configs/footer.css">
         <link rel="stylesheet" href="../css/style_configs/scrollbar.css">
         
-        <title>FasTICKET: Ações rápidas para seu bilhete.</title>
-    </head>
+        <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
 
+        <script src="../js/copyFunction.js"></script>
+
+        <title>FasTICKET: Relatórios de Gerenciamento</title>
+    </head>
+    
     <body>
         <!-- Navbar -->
         <header>
@@ -25,7 +29,7 @@
                 <ul class="nav-list">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about_ous_view/aboutOus.html">Sobre</a></li>
-                    <li><a href="relatorio.html">Relatórios</a></li>
+                    <li><a href="#">Relatórios</a></li>
                     <li class="disable">Para empresas</li>
                 </ul>
 
@@ -44,48 +48,37 @@
 
         <main>
             <section>
-                <div class="myticket-header">
-                    <div class="myticket-header-title">
-                        <h1>Meu Bilhete</h1>
+                <section class="rel-container">
+                    <h1>Relatório de Gerenciamento</h1>
+    
+                    <div class="rel-header">
+                        <input id="ticketCode" type="text" placeholder="# Seu código" maxlength="13"> 
+                        
+                        <button type="button" class="search-btn">
+                            <img src="../assets/icons/search_icon.svg" alt="search">
+                        </button>
                     </div>
-
-                    <div>
-                        <div class="myticket-content-mainpage">
-                            <div class="myticket-card">
-                                <img src="../assets/cards/flip-card-bg.svg" alt="Cartão">
-                            </div>
-
-                            <div class="myticket-content-form">
-                                <h2>Código do Bilhete</h2>
-
-                                <input type="text" placeholder="xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx">
-                                
-                                <div class="myticket-form-box">
-                                    <div class="form-box-item">
-                                        <p>Minha recarga está ativa: <span>-</span></p>
-                                    </div>
-                                    <div class="form-box-item">
-                                        <p>Tipo de recarga ativo: <span>-</span></p>
-                                    </div>
-                                    <div class="form-box-item">
-                                        <p>Minha recarga está vencida: <span>-</span></p>
-                                    </div>
-                                    <div class="form-box-item">
-                                        <p>Quando minha recarga vence: <br><span>Day Month DD AAAA HH:MM:SS</span></p>
-                                    </div>
-                                </div>
-
-                                <div class="myticket-form-buttons">
-                                    <button type="button" onclick="location.href='recharge.html'" class="generic-btn" id="rechargeBtn">Recarregar bilhete</button>
-                                    <button type="button" class="generic-btn" id="useBtn">Utilizar bilhete</button>
-                                </div>
-                            </div>
-                        </div>
+    
+                    <div class="rel-table">
+                        <table>
+                            <tr>
+                                <th>Recarga</th>
+                                <th>Tipo</th>
+                                <th>Data</th>
+                                <th>Estado</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Duplo</td>
+                                <td>15/08/2022</td>
+                                <td>Ativa</td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
+                </section>
             </section>
         </main>
-         
+
         <!-- Footer -->
         <footer>
             <div class="container-footer">
@@ -113,7 +106,7 @@
                             <li><a href="generate.html">Gerar novo bilhete</a></li>
                             <li><a href="recharge.html">Recarregar bilhete</a></li>
                             <li><a href="mainTicket.html">Utilizar Bilhetes</a></li>
-                            <li><a href="relatorio.html">Relatório de uso</a></li>
+                            <li><a href="#">Relatório de uso</a></li>
                             <li><a href="#">Rel. de recarga</a></li>
                         </ul>
                     </div>
@@ -128,10 +121,6 @@
                 </div>
             </div>
         </footer>
-        <!-- Footer -->
-
-        <!-- Modal Utilização -->
-        
-        <!-- Modal Utilização -->
+        <!-- Footer -->    
     </body>
 </html>
