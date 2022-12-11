@@ -84,6 +84,12 @@
 .recharge-cards img{
     margin-left: 15px;
     margin-right: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.recharge-cards img:hover {
+    box-shadow: -1px 0 10px rgba(255, 255, 255, .30);
+    border-radius: 20px;
 }
 
 .recharge-btn {

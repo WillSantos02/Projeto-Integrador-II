@@ -57,7 +57,7 @@
                             <p>Com o código único você abre muitas portas e vai a lugares inimagináveis!<br><span>Obtenha o seu já!</span></p>
                         </div>
                         <div class="myTicket-header-code">
-                            <input type="text" placeholder="# Seu código" maxlength="13"> 
+                            <input id="ticketCode" type="text" placeholder="# Seu código" maxlength="13"> 
                             
                             <button type="button" class="search-btn">
                                 <img src="../assets/icons/search_icon.svg" alt="search">
@@ -182,7 +182,9 @@
                         <p>Ao aceitar este termo será gerado um código único, onde será possivel recarregar, usar e gerar um relatório de uso. Você pode recarrega-lo várias vezes, sendo armazenadas elas sequencialmente onde uma vez expirada a próxima será ativada automáticamente</p>
                     </div>
                     <div class="termUse-main-button">
-                        <button type="button" id="termUseButton" class="termUse-btn">Aceitar <img src="../assets/icons/arrow_right.svg"></button>
+                        <button type="button" id="termUseButton" class="termUse-btn" >Aceitar 
+                            <img id="btnIcon" src="../assets/icons/arrow_right.svg">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -204,8 +206,8 @@
                 
                 <div class="recharge-main">
                     <div class="recharge-cards">
-                        <img src="../assets/cards/card_personalite.svg" alt="Cartão Pesonalitè">
-                        <img src="../assets/cards/card_creditos.svg" alt="Cartão Créditos">
+                        <img src="../assets/cards/card_personalite.svg" id="cardPersonalite" alt="Cartão Pesonalitè">
+                        <img src="../assets/cards/card_creditos.svg" id="cardCredito" alt="Cartão Créditos">
                     </div>
 
                     <div class="recharge-btn">
@@ -299,6 +301,35 @@
         <!-- Modal Recarga - Créditos | Personalite -->
     </body>
 
+    <!-- Geração do código -->
+    <script src="../js/createTicket.js"></script>
+    <script>
+        const createTicketBtn = document.getElementById('termUseButton');
+        const ticketCode = document.getElementById('ticketCode');
+        const iconButton = document.getElementById("btnIcon");
+
+        createTicketBtn.addEventListener('click', async () => {
+            changeImage();
+
+            let newTicketCode = await createTicket();
+
+            console.log(newTicketCode)
+
+            ticketCode.value = newTicketCode.TICKET_ID || newTicketCode.error;
+
+            setTimeout(() => {
+                geracaoCodigoModal.style.display = "none";
+                iconButton.src = iconButton.src.replace("loader.svg", "arrow_right.svg");
+            }, await createTicket())
+        })
+
+        function changeImage() {
+            iconButton.src = iconButton.src.replace("arrow_right.svg", "loader.svg");
+            // console.log(iconButton.src)
+        }
+    </script>
+    <!-- Geração do código -->
+
     <script>
         const geracaoCodigoModal = document.getElementById('termUseModal');
         const selecTypeRechargeModal = document.getElementById('rechargeModal');
@@ -331,10 +362,44 @@
             });
         }
 
+        function abrirModalCredito(){
+            creditModal.style.display = "flex";
+            selecTypeRechargeModal.style.display = "none";
+
+            creditModal.addEventListener('click', (e) => {
+                if(e.target.id == 'creditModal' ||
+                    e.target.id == 'closeModal' ||
+                    e.target.id == 'CancelBtn' ||
+                    e.target.id == 'PersonaliteOptionBtn'){
+                    creditModal.style.display = "none";
+                }
+            });
+        }
+
+        function abrirModalPersonalite(){
+            personaliteModal.style.display = "flex";
+            selecTypeRechargeModal.style.display = "none";
+
+            personaliteModal.addEventListener('click', (e) => {
+                if(e.target.id == 'personaliteModal' ||
+                    e.target.id == 'closeModal' ||
+                    e.target.id == 'CancelBtn'){
+                    personaliteModal.style.display = "none";
+                }
+            })
+            
+        }
+
         const openGeracao = document.querySelector('#codeGenerate');
         openGeracao.addEventListener('click', () => abrirModalTermoGeracao('termUseModal'));
 
         const openRecharge = document.querySelector('#codeRecharge');
         openRecharge.addEventListener('click', () => abrirModalRecarga('rechargeModal'));
+
+        const openCredit = document.querySelector('#cardCredito');
+        openCredit.addEventListener('click', () => abrirModalCredito('creditModal'));
+
+        const openPersonalite = document.querySelector('#cardPersonalite');
+        openPersonalite.addEventListener('click', () => abrirModalPersonalite('personaliteModal'));
     </script>
 </html>

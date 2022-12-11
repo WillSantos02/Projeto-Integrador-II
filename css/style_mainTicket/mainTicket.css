@@ -41,6 +41,18 @@
     height: 44px;
     margin-bottom: 50px;
 }
+.myTicket-header-code input {
+    width: 176px;
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
 #code-message {
     width: 371px;
     height: 27px;
@@ -71,18 +83,6 @@
 .search-btn:hover{
     cursor: pointer;
     opacity: 0.5;
-}
-
-.myTicket-header-code input {
-    width: 166px;
-    height: 44px;
-    background-color: transparent;
-    border: 1px solid var(--white);
-    border-radius: 10px;
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
 }
 
 .myTicket-content-cards {

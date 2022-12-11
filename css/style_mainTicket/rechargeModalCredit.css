@@ -43,9 +43,15 @@
     font-weight: 600;
 }
 
-.credit-header-icon {
+.credit-header-icon img {
     margin-top: 25px;
     margin-left: 38px;
+    cursor: pointer;
+    transition: .3s;
+}
+.credit-header-icon img:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, .30);
+    border-radius: 50px;
 }
 
 .credit-main {
@@ -84,7 +90,7 @@
 
     border: 3px solid white;
     border-radius: 7px;
-    background-image: url(../assets/btn_bg.png);
+    background-image: url(../../assets/btn_bg.png);
     background-color: transparent;
 
     cursor: pointer;
@@ -122,6 +128,7 @@
     transition: .3s;
 }
 .type-btn:hover {
+    cursor: pointer;
     background-color: var(--purple);
     border: none;
 }
