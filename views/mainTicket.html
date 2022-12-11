@@ -12,8 +12,6 @@
         <link rel="stylesheet" href="../css/style_mainTicket/useTicketModal.css">
 
         <link rel="stylesheet" href="../css/components.css">
-
-        <link rel="stylesheet" href="../css/style_recharge/messageModal.css">
         
         <title>FasTICKET: Bem vindo! Aqui você cria, recarrega, utilza, faz o que quiser com seu bilhete.</title>
     </head>
@@ -60,11 +58,11 @@
                             <input id="ticketCode" type="text" placeholder="# Seu código" maxlength="13"> 
                             
                             <button type="button" class="search-btn">
-                                <img src="../assets/icons/search_icon.svg" alt="search">
+                                <img id="searchBtn" src="../assets/icons/search_icon.svg" alt="search">
                             </button>
 
                             <div id="code-message">
-                                <span id="message" class="">...</span>
+                                <span id="SearchMessage" class=""></span>
                             </div>
                         </div>
                     </div>
@@ -413,4 +411,5 @@
     <script src="../js/mainTicket/openModals.js"></script>
     <script src="../js/mainTicket/interacionsBtn.js"></script>
     <script src="../js/mainTicket/rechargeMain.js"></script>
+    <script src="../js/mainTicket/searchTicketStatus.js"></script>
 </html>
