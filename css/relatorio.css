@@ -64,3 +64,7 @@ th, td {
     height: 50px;
     padding: 15px;
 }
+
+strong {
+    color: white;
+}
