@@ -3,7 +3,7 @@ const btnCreditos = document.getElementById('btnRecargaCreditos')
 
 const modalMensagemSuccess = document.getElementById('modalMensagemSuccess')
 const modalMensagemError = document.getElementById('modalMensagemError')
-const msgModal = document.getElementById('msgModal')
+const msgModal = document.querySelectorAll('.msgModal')
 
 const ticketCodeInput = document.getElementById('ticketCode')
 
@@ -24,9 +24,13 @@ if (ticketCodeInput.value != '')
                 }
             }).then(res => res.json()).then(res=>res)
 
-            exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
+            if (response.status == 'success') {
+                exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
+                ticketCode.dispatchEvent(new Event('input'));
+            } else {
+                exibeModal(response.status, 'Erro ao recarregar bilhete!', 'recharge');
+            }
 
-            ticketCode.dispatchEvent(new Event('input'));
         }
     }
 })
@@ -46,8 +50,13 @@ btnCreditos.addEventListener('click', async () => {
                     type: btnSelect[0].id
                 }
             }).then(res => res.json()).then(res=>res)
-                
-            exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
+            
+            if (response.status == 'success') {
+                exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
+                ticketCode.dispatchEvent(new Event('input'));
+            } else {
+                exibeModal(response.status, 'Erro ao recarregar bilhete!', 'recharge');
+            }
         }
     }
 })
@@ -57,9 +66,9 @@ function exibeModal (status, message, operacao) {
     if(status == 'success'){
 
         if (operacao == 'recharge') {
-            msgModal.innerHTML = message
+            msgModal[0].innerHTML = message
         } else {
-            msgModal.innerHTML = message
+            msgModal[0].innerHTML = message
         }
         modalMensagemSuccess.style.display = 'flex';
 
@@ -71,6 +80,12 @@ function exibeModal (status, message, operacao) {
             //consollog('entrou no setTimeout');
         }, 2000);
     } else {
+        if (operacao == 'recharge') {
+            msgModal[1].innerHTML = message
+        } else {
+            msgModal[1].innerHTML = message
+        }
+
         modalMensagemError.style.display = 'flex';
         personaliteModal.style.display = "none";
         creditModal.style.display = "none";
