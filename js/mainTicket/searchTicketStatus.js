@@ -9,7 +9,6 @@ btnRecharge.classList.add('disable')
 btnUse.classList.add('disable')
 
 ticket.addEventListener('input', async () => {
-    console.log('mudou')
     if (ticket.value.length == 12) {
 
         returnMessage.classList.remove('sucessMsg')
@@ -26,7 +25,6 @@ ticket.addEventListener('input', async () => {
 
 
         if(response.payload.exist == false && response.payload.valid == false) {
-            console.log('exist true')
 
             returnMessage.style.display = "flex"
             returnMessage.classList.add('errorMsg')
@@ -37,8 +35,6 @@ ticket.addEventListener('input', async () => {
         }
 
         if(response.payload.exist == true && response.payload.valid == false){
-            console.log('true false')
-
 
             returnMessage.style.display = "flex"
             returnMessage.classList.add('warningMsg')
@@ -49,9 +45,6 @@ ticket.addEventListener('input', async () => {
         }
 
         if(response.payload.exist == true && response.payload.valid == true){
-            console.log('true true')
-
-
 
             returnMessage.style.display = "flex"
             returnMessage.classList.add('sucessMsg')
