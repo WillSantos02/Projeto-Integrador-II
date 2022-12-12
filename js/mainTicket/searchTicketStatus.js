@@ -8,6 +8,10 @@ const btnUse = document.getElementById('useCode')
 btnRecharge.classList.add('disable')
 btnUse.classList.add('disable')
 
+ticket.addEventListener("focus", () => 
+    returnMessage.style.display = "none"
+)
+
 ticket.addEventListener('input', async () => {
     if (ticket.value.length == 12) {
 
@@ -57,10 +61,6 @@ ticket.addEventListener('input', async () => {
 })
 
 searchBtn.addEventListener('click', async () => {
-
-    ticket.addEventListener("focus", () => 
-        returnMessage.style.display = "none"
-    )
     
     returnMessage.classList.remove('sucessMsg')
     returnMessage.classList.remove('warningMsg')
