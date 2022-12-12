@@ -24,8 +24,6 @@ if (ticketCodeInput.value != '')
                 }
             }).then(res => res.json()).then(res=>res)
 
-            console.log(btnSelect[0].id)
-
             exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
         }
     }
@@ -47,8 +45,6 @@ btnCreditos.addEventListener('click', async () => {
                 }
             }).then(res => res.json()).then(res=>res)
                 
-            console.log(btnSelect[0].id)
-
             exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
         }
     }
@@ -67,7 +63,6 @@ function exibeModal (status, message, operacao) {
 
         personaliteModal.style.display = "none";
         creditModal.style.display = "none";
-        //console.log('entrou no if');
             
         setTimeout(() => {
             modalMensagemSuccess.style.display = 'none';
