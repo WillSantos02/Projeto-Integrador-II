@@ -55,7 +55,7 @@
                             <p>Com o código único você abre muitas portas e vai a lugares inimagináveis!<br><span>Obtenha o seu já!</span></p>
                         </div>
                         <div class="myTicket-header-code">
-                            <input id="ticketCode" type="text" placeholder="# Seu código" maxlength="13"> 
+                            <input id="ticketCode" type="text" placeholder="# Seu código" maxlength="13">
                             
                             <button type="button" class="search-btn">
                                 <img id="searchBtn" src="../assets/icons/search_icon.svg" alt="search">
@@ -240,8 +240,8 @@
 
                     <div class="main-types">
                         <div class="type-buttons">
-                            <button type="button" class="type-btn" id="Unico" data-value="3.26">único</button>
-                            <button type="button" class="type-btn" id="Duplo" data-value="6.52">duplo</button>
+                            <button type="button" class="type-btn" id="u" data-value="3.26">único</button>
+                            <button type="button" class="type-btn" id="d" data-value="6.52">duplo</button>
                         </div>
 
                         <input type="text" name="valor" class="value-display" id="valorRecarga" readonly placeholder="R$ --">
@@ -313,10 +313,10 @@
                 </div>
             </div>
         </div>
-        <!-- Modal de sucesso -->
+        <!-- Modal de sucesso --> 
 
-        <!-- Modal de erro -->
-        <div id="modalMensagemError" style="display: none;">    
+        <!-- Modal de erro --> 
+        <div id="modalMensagemError" style="display: none;">
             <div class="message-modal-container">
                 <div class="message-bar-modal">
                     <h1 class="message-modal-title">Aviso de recargar !</h1>
@@ -350,24 +350,19 @@
                     </div>
 
                     <div class="ticketUse-options">
+                        <select name="transporte" id="transporte" class="select-box">
+                            <option value="" selected disabled hidden>Meio de Transporte</option>
+                            <option value="metro" class="select-item">Metro</option>
+                            <option value="onibus" class="select-item">Ônibus</option>
+                            <option value="trem" class="select-item">Trem</option>
+                        </select>
 
-                        <div class="dropdown">
-                            <button onclick="openDropDownMeio()" class="option-dropDown">Meio de Transporte <img src="../assets/icons/dropdown_menu_icon.svg"></button>
-                            <div id="dropdownMeio" class="dropdown-content">
-                                <a href="#home">Trem</a>
-                                <a href="#about">Ônibus</a>
-                                <a href="#contact">Metro</a>
-                            </div>
-                        </div>
-
-                        <div class="dropdown">
-                            <button onclick="openDropDownTransporte()" class="option-dropDown">Local <img src="../assets/icons/dropdown_menu_icon.svg"></button>
-                            <div id="dropdownTransporte" class="dropdown-content">
-                                <a href="#home">Campinas</a>
-                                <a href="#about">Sumaré</a>
-                                <a href="#contact">Valinhos</a>
-                            </div>
-                        </div>
+                        <select name="local" id="local" class="select-box">
+                            <option value="" selected disabled hidden>Local</option>
+                            <option value="campinas" class="select-item">Campinas</option>
+                            <option value="hotolandia" class="select-item">Hortolandia</option>
+                            <option value="sumare" class="select-item">Sumaré</option>
+                        </select>
                     </div>
 
                     <div class="ticketUse-fun-btn-box">
@@ -407,9 +402,9 @@
     </script>
 
     <script src="../js/createTicket.js"></script>
-    <script src="../js/mainTicket/openDropDown.js"></script>
     <script src="../js/mainTicket/openModals.js"></script>
     <script src="../js/mainTicket/interacionsBtn.js"></script>
     <script src="../js/mainTicket/rechargeMain.js"></script>
     <script src="../js/mainTicket/searchTicketStatus.js"></script>
+    <script src="../js/mainTicket/useTransaction.js"></script>
 </html>

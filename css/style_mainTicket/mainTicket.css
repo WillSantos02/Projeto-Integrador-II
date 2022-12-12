@@ -180,3 +180,7 @@
 #useCard {
     margin-right: 0px;
 }
+
+.disable {
+    pointer-events: none;
+}

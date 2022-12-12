@@ -22,6 +22,8 @@ if (ticketCodeInput.value != '')
                 }
             }).then(res => res.json()).then(res=>res)
 
+            console.log(btnSelect[0].id)
+
             exibeModal(response.status);
         }
     }
@@ -43,6 +45,8 @@ btnCreditos.addEventListener('click', async () => {
                 }
             }).then(res => res.json()).then(res=>res)
                 
+            console.log(btnSelect[0].id)
+
             exibeModal(response.status);
         }
     }
@@ -59,7 +63,7 @@ function exibeModal (status) {
         setTimeout(() => {
             modalMensagemSuccess.style.display = 'none';
             //consollog('entrou no setTimeout');
-        }, 5000);
+        }, 2000);
     } else {
         modalMensagemError.style.display = 'flex';
         personaliteModal.style.display = "none";
@@ -69,6 +73,6 @@ function exibeModal (status) {
         setTimeout(() => {
             modalMensagemError.style.display = 'none';
             // consollog('entrou no setTimeout');
-        }, 5000);
+        }, 2000);
     }
 }
