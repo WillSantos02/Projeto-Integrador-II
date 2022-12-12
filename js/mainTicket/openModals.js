@@ -3,6 +3,7 @@ const selecTypeRechargeModal = document.getElementById('rechargeModal');
 const creditModal = document.getElementById('creditModal');
 const personaliteModal = document.getElementById('personaliteModal');
 const ticketUseModal = document.getElementById('ticketUseModal');
+const usageTermModal = document.getElementById('usageTermModal');
 
 function abrirModalTermoGeracao(){
     geracaoCodigoModal.style.display = "flex";
@@ -85,7 +86,18 @@ function abrirModalUso(){
             e.target.id == 'closeModal' ||
             e.target.id == 'CancelBtn'){
             ticketUseModal.style.display = "none";
+        }
+    })
+}
 
+function abrirModalTermoUso(){
+    ticketUseModal.style.display = "none";
+    usageTermModal.style.display = "flex";
+
+    usageTermModal.addEventListener('click', (e) => {
+        if(e.target.id == 'usageTermModal' ||
+            e.target.id == 'closeModal'){
+                usageTermModal.style.display = "none";
         }
     })
 }
@@ -103,4 +115,7 @@ const openPersonalite = document.querySelector('#cardPersonalite');
 openPersonalite.addEventListener('click', () => abrirModalPersonalite('personaliteModal'));
 
 const openUseModal = document.querySelector('#useCode');
-openUseModal.addEventListener('click', () => abrirModalUso('ticketUseModal'));
+openUseModal.addEventListener('click', () => abrirModalUso('ticketUseModal'))
+
+const openTermUseModal = document.querySelector('#btnticketUse');
+openTermUseModal.addEventListener('click', () => abrirModalTermoUso('usageTermModal'));;
