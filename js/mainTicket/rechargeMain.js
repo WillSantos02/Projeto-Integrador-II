@@ -25,6 +25,8 @@ if (ticketCodeInput.value != '')
             }).then(res => res.json()).then(res=>res)
 
             exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
+
+            ticketCode.dispatchEvent(new Event('input'));
         }
     }
 })
