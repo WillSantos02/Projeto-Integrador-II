@@ -3,8 +3,10 @@ const btnCreditos = document.getElementById('btnRecargaCreditos')
 
 const modalMensagemSuccess = document.getElementById('modalMensagemSuccess')
 const modalMensagemError = document.getElementById('modalMensagemError')
+const msgModal = document.getElementById('msgModal')
 
 const ticketCodeInput = document.getElementById('ticketCode')
+
 
 btnPersonalite.addEventListener('click', async () => {
 if (ticketCodeInput.value != '')
@@ -24,7 +26,7 @@ if (ticketCodeInput.value != '')
 
             console.log(btnSelect[0].id)
 
-            exibeModal(response.status);
+            exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
         }
     }
 })
@@ -47,15 +49,22 @@ btnCreditos.addEventListener('click', async () => {
                 
             console.log(btnSelect[0].id)
 
-            exibeModal(response.status);
+            exibeModal(response.status, 'Bilhete Recarregado com Sucesso!', 'recharge');
         }
     }
 })
 
-function exibeModal (status) {
+function exibeModal (status, message, operacao) {
     //alert(response.message);
     if(status == 'success'){
+
+        if (operacao == 'recharge') {
+            msgModal.innerHTML = message
+        } else {
+            msgModal.innerHTML = message
+        }
         modalMensagemSuccess.style.display = 'flex';
+
         personaliteModal.style.display = "none";
         creditModal.style.display = "none";
         //console.log('entrou no if');

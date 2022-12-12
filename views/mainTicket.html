@@ -306,7 +306,7 @@
                 </div>
                 
                 <div class="modal-message">
-                    <span>Bilhete recarregado com Sucesso !</span>
+                    <span id="msgModal">Bilhete recarregado com Sucesso !</span>
                 </div>
                 
                 <div class="message-bottom-modal sucess">
@@ -381,22 +381,22 @@
         const iconButton = document.getElementById("btnIcon");
 
         createTicketBtn.addEventListener('click', async () => {
-            changeImage();
+            changeImage(iconButton);
 
             let newTicketCode = await createTicket();
 
-            console.log(newTicketCode)
-
             ticketCode.value = newTicketCode.TICKET_ID || newTicketCode.error;
-
+            
+            ticketCode.dispatchEvent(new Event('input')) 
+            
             setTimeout(() => {
                 geracaoCodigoModal.style.display = "none";
                 iconButton.src = iconButton.src.replace("loader.svg", "arrow_right.svg");
-            }, await createTicket())
+            }, await newTicketCode)
         })
 
-        function changeImage() {
-            iconButton.src = iconButton.src.replace("arrow_right.svg", "loader.svg");
+        function changeImage(element) {
+            element.src = iconButton.src.replace("arrow_right.svg", "loader.svg");
             // console.log(iconButton.src)
         }
     </script>

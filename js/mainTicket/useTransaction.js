@@ -18,6 +18,9 @@ useBtn.addEventListener('click', async (e) => {
                 })
             }).then(res => res.json()).then(res=>res)
 
+            exibeModal(response.status, 'Bilhete Utilizado com Sucesso!', 'transaction');
+            ticketUseModal.style.display = 'none';
+
             console.log(response)
         }
     }
