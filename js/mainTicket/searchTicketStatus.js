@@ -4,6 +4,7 @@ const ticket = document.getElementById('ticketCode')
 
 const btnRecharge = document.getElementById('codeRecharge')
 const btnUse = document.getElementById('useCode')
+const btnCreate = document.getElementById('codeGenerate')
 
 btnRecharge.classList.add('disable')
 btnUse.classList.add('disable')
@@ -19,6 +20,10 @@ ticket.addEventListener('input', async () => {
         returnMessage.classList.remove('warningMsg')
         returnMessage.classList.remove('errorMsg')
 
+        btnCreate.classList.remove('purple')
+        btnRecharge.classList.remove('purple')
+        btnUse.classList.remove('purple')
+
         const response = await fetch('http://localhost:8080/tickets/info', {
             method: 'GET',
             headers: {
@@ -33,7 +38,8 @@ ticket.addEventListener('input', async () => {
             returnMessage.style.display = "flex"
             returnMessage.classList.add('errorMsg')
             returnMessage.innerHTML = "Código inválido!"
-
+            
+            btnCreate.classList.add('purple')
             btnRecharge.classList.add('disable')
             btnUse.classList.add('disable')
         }
@@ -45,6 +51,7 @@ ticket.addEventListener('input', async () => {
             returnMessage.innerHTML = "Código válido porém não possui recarga para uso."
 
             btnRecharge.classList.remove('disable')
+            btnRecharge.classList.add('purple')
             btnUse.classList.add('disable')
         }
 
@@ -56,6 +63,7 @@ ticket.addEventListener('input', async () => {
 
             btnRecharge.classList.remove('disable')
             btnUse.classList.remove('disable')
+            btnUse.classList.add('purple')
         }
     }   
 })

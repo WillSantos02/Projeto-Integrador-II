@@ -114,6 +114,28 @@ nav {
     text-decoration: none;
     opacity: 0.5;
 }
+
+.purple {
+    border: none;
+    background-color: var(--purple);
+    animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+    0% {
+        box-shadow: 0 0 20px 1px rgba(99, 92, 206, 0.55);
+    }
+    
+    50% {
+        box-shadow: 0 0 20px 1px rgba(99, 92, 206, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 20px 1px rgba(99, 92, 206, 0.55);
+    }
+}
+
+
 /** Navbat **/
 
 /** Footer **/
